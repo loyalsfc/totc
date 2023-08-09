@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "primary": "rgba(73, 187, 189, 1)"
+        "primary": "#49BBBD",
+        "turqoise": "#00CBB8",
+        "blue": "#2F327D"
       },
       fontFamily:{
         "nunito-sans": ['var(--font-nunito-sans)']
