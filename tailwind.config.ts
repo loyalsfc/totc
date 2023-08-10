@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         "primary": "#49BBBD",
         "turqoise": "#00CBB8",
-        "blue": "#2F327D"
+        "blue": "#2F327D",
+        'green-100': "#33EFA0"
       },
       fontFamily:{
         "nunito-sans": ['var(--font-nunito-sans)']

@@ -1,12 +1,36 @@
 import Image from 'next/image'
 import React from 'react'
+import Title from '../title/title'
 
 function Solution() {
     return (
         <section>
             <div className="container mx-auto">
-                <h3 className='text-3xl font-bold text-blue mb-4'>All-in-one <span className='text-turqoise'>Cloud Solution</span></h3>
-                <p className="max-w-3xl mx-auto">TOTC is one powerful online software suite that combines all the tools needed to run a successful school or office.</p>
+                <Title
+                    blueText='All-in-one'
+                    turqoiseText='Cloud Solution'
+                    note='TOTC is one powerful online software suite that combines all the tools needed to run a successful school or office.'
+                />
+                <div className='grid grid-cols-3 gap-16 py-20'>
+                    <Cards
+                        icon='/icon/file-invoice.svg'
+                        title='Online Billing, Invoicing, & Contracts'
+                        note='Simple and secure control of your organization’s financial and legal transactions. Send customized invoices and contracts'
+                        bgColor='#2F327D'
+                    />
+                    <Cards
+                        icon='/icon/calender.svg'
+                        title='Easy Scheduling & Attendance Tracking'
+                        note='Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student attendance'
+                        bgColor='#00CBB8'
+                    />
+                    <Cards
+                        icon='/icon/users.svg'
+                        title='Customer Tracking'
+                        note='Automate and track emails to individuals or groups. Skilline’s built-in system helps organize your organization '
+                        bgColor='#49BBBD'
+                    />
+                </div>
             </div>
         </section>
     )
@@ -14,19 +38,20 @@ function Solution() {
 
 function Cards({icon, title, note, bgColor}: {icon: string, title: string, note: string, bgColor: string}){
     return(
-        <div>
-            <div className='bg-white rounded-[1.25rem]'>
-                <div className={`rounded-full mb-20 h-16 w-16 ${'bg-'+bgColor} grid place-content-center drop-shadow-[0px_10px_40px_rgba(54,61,136,0.06)]`}>
-                    <Image
-                        src={icon}
-                        height={40}
-                        width={40}
-                        alt=''
-                    />
-                </div>
-                <h5>{title}</h5>
-                <p>{note}</p>
+        <div className='bg-white text-center rounded-[1.25rem] flex flex-col shadow-[0px_5px_30px_0px_rgba(38,45,118,0.08)]'>
+            <div 
+                className={`rounded-full mb-12 h-16 w-16 -mt-8 mx-auto grid place-content-center drop-shadow-[0px_10px_40px_rgba(54,61,136,0.06)]`}
+                style={{backgroundColor: bgColor}}
+            >
+                <Image
+                    src={icon}
+                    height={30}
+                    width={30}
+                    alt=''
+                />
             </div>
+            <h5 className='text-2xl font-medium text-blue mb-6 p-8 pb-0 mt-auto'>{title}</h5>
+            <p className='p-8 pt-0 mt-auto'>{note}</p>
         </div>
     )
 }
