@@ -17,6 +17,9 @@
   .button{
     @apply rounded-[80px] py-2.5 px-8 font-semibold text-sm
   }
+  .title{
+    @apply text-3xl text-blue font-bold mb-4
+  }
 }
 
 @media (prefers-color-scheme: dark) {
