@@ -15,6 +15,7 @@ import WhatIsCard from '@/components/whatIs/WhatIsCard'
 import Title from '@/components/title/title'
 import Link from 'next/link'
 import FeatureList from '@/components/feature/featureList'
+import ExploreCourses from '@/components/explore-courses/explore-courses'
 
 export default function Home() {
   return (
@@ -59,8 +60,8 @@ export default function Home() {
               </article>
               <div className='w-1/2 shrink-'>
                 <div className='relative'>
-                  <div className='h-40 w-40 rounded-3xl bg-green-100 absolute -left-4 -top-4 -z-10' />
-                  <div className='h-60 w-60 rounded-3xl bg-green absolute -right-4 -bottom-4 -z-10' />
+                  <div className='h-40 w-40 rounded-3xl bg-blue absolute -left-4 -top-4 -z-10' />
+                  <div className='h-60 w-60 rounded-3xl bg-green-100 absolute -right-4 -bottom-4 -z-10' />
                   <video src="/classroom.mp4" className='w-full max-h-[288px] object-cover'></video>
                 </div>
               </div>
@@ -72,9 +73,9 @@ export default function Home() {
                 turqoiseText='Features'
                 note='This very extraordinary feature, can make learning activities more efficient'
               />
-              <div className='flex pt-16'>
-                <div className='flex-1 gap-10 shrink-0'>
-                  <div className='aspect-[1.64/1] relative'>
+              <div className='flex pt-16 gap-10'>
+                <div className='flex-1'>
+                  <div className='aspect-[1.64/1] relative flex'>
                     <Image
                       src={classroomImage}
                       fill
@@ -166,13 +167,12 @@ export default function Home() {
               </div>
             </section>
 
-            <div className=''>
-              <button className='button border border-primary text-primary font-normal mx-auto'>See more seatures</button>
+            <div className='pb-20'>
+              <button className='button border border-primary text-primary font-normal block mx-auto hover:bg-primary hover:text-white'>See more features</button>
             </div>
-
-            
           </div>
         </div>
+        <ExploreCourses />
       </main>
     </div>
   )

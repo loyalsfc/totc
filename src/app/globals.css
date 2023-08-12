@@ -15,10 +15,10 @@
     @apply after:left-0 w-full h-20 absolute left-0 bottom-0
   }
   .button{
-    @apply rounded-[80px] py-2.5 px-8 font-semibold text-sm
+    @apply rounded-[80px] py-2.5 px-8 font-semibold text-sm transition-all
   }
   .title{
-    @apply text-3xl text-blue font-bold mb-4
+    @apply text-3xl text-blue font-bold mb-4 
   }
 }
 
