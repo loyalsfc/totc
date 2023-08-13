@@ -5,8 +5,8 @@ import CourseCard from './course-card'
 
 function ExploreCourses() {
     return (
-        <section className='pt-20 relative'>
-            <div className='absolute left-0 top-0 h-full w-5/6 bg-[#9DCCFF]/20 -z-10' />
+        <section className='pt-20 pb-1 relative mb-20'>
+            <div className='absolute left-0 top-0 h-full w-5/6 bg-[#9DCCFF]/20 -z-10 rounded-br-[5rem]' />
             <div className="max-w-6xl mx-auto">
                 <div className="container mx-auto">
                     <h4 className='text-black/[87] font-bold text-3xl mb-5'>Explore Courses</h4>
