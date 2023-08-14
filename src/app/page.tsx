@@ -12,12 +12,18 @@ import testIllustration from '../../public/test-illustration.png'
 import classIllustration from '../../public/class-illustration.png'
 import discussionIllustration from '../../public/discussion-illustration.png'
 import smilingWoman from '../../public/smiling-woman.png'
+import news1 from '../../public/news1.png'
+import news2 from '../../public/news2.png'
+import news3 from '../../public/news3.png'
+import news4 from '../../public/news4.png'
 import WhatIsCard from '@/components/whatIs/WhatIsCard'
 import Title from '@/components/title/title'
 import Link from 'next/link'
 import FeatureList from '@/components/feature/featureList'
 import ExploreCourses from '@/components/explore-courses/explore-courses'
 import { FaStar } from 'react-icons/fa6'
+import NewsCard from '@/components/news-card/news-card'
+import Footer from '@/components/footer/footer'
 
 export default function Home() {
   return (
@@ -176,10 +182,10 @@ export default function Home() {
         </div>
         <ExploreCourses />
 
-        <section className='gap-20'>
+        <section className='gap-20 pb-20'>
           <div className='max-w-6xl mx-auto flex gap-20 items-center'>
             <article className='w-1/3'>
-              <p className='flex items-center text-sm text-[#525596] gap-4'>
+              <p className='flex items-center text-sm text-[#525596] gap-4 mb-2'>
                 <span className='h-px w-10 bg-[#525596]'/>
                 <span>TESTIMONIAL</span>
               </p>
@@ -224,7 +230,50 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="py-10">
+          <div className='max-w-6xl mx-auto'>
+            <Title blueText='Latest News and Resources' turqoiseText='' note='See the developments that have occurred to TOTC in the world' />
+
+            <div className='grid grid-rows-3  grid-flow-col-dense gap-12 pt-10'>
+              <article className='flex flex-col justify-between row-span-3'>
+                <div className='aspect-[1.88/1] rounded-2xl overflow-hidden relative'>
+                  <Image
+                    src={news1}
+                    fill
+                    alt='Classroom Image'
+                    placeholder='blur'
+                    className='object-cover'
+                  />
+                </div>
+                <span className='label w-fit'>NEWS</span>
+                <h6 className='text-blue font-medium hover:underline cursor-pointer'>Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution</h6>
+                <p className='text-sm'>Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...</p>
+                <Link href="" className='underline text-sm'>Read more</Link>
+              </article>
+              <NewsCard
+                image={news2}
+                title='Class Technologies Inc. Closes $30 Million Series A Financing to Meet High Demand'
+                note='Class Technologies Inc., the company that created Class,...'
+                label='PRESS RELEASE'
+              />
+              <NewsCard
+                image={news3}
+                title='Zoom’s earliest investors are betting millions on a better Zoom for schools'
+                note='Zoom was never created to be a consumer product. Nonetheless, the...'
+                label='NEWS'
+              />
+              <NewsCard
+                image={news4}
+                title='Former Blackboard CEO Raises $16M to Bring LMS Features to Zoom Classrooms'
+                note='This year, investors have reaped big financial returns from betting on Zoom...'
+                label='NEWS'
+              />
+            </div>
+          </div>
+        </section>
       </main>
+      <Footer/>
     </div>
   )
 }

@@ -20,6 +20,9 @@
   .title{
     @apply text-3xl text-blue font-bold mb-4 
   }
+  .label{
+    @apply bg-primary rounded-full py-1 px-4 text-white text-center text-sm
+  }
 }
 
 @media (prefers-color-scheme: dark) {
