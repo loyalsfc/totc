@@ -12,7 +12,7 @@ function Oursuccess() {
                 <h3 className='text-4xl font-bold mb-4'>Our Success</h3>
                 <p className=' max-w-3xl mx-auto'>Ornare id fames interdum porttitor nulla turpis etiam. Diam vitae sollicitudin at nec nam et pharetra gravida. Adipiscing a quis ultrices eu ornare tristique vel nisl orci. </p>
 
-                <div className='grid grid-cols-5 pt-16'>
+                <div className='grid grid-cols-1 md:grid-cols-5 pt-16'>
                     <Counts
                         count={15}
                         prefix='K+'

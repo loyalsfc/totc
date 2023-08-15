@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../../../public/logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaBars } from 'react-icons/fa6'
 
 
 function Header() {
@@ -16,17 +17,20 @@ function Header() {
                         placeholder="blur"
                     />
                 </div>
-                <nav className='flex gap-10 text-white'>
+                <nav className='gap-6 lg:gap-10 text-white hidden md:flex'>
                     <Link href="">Home</Link>
                     <Link href="">Courses</Link>
                     <Link href="">Careers</Link>
                     <Link href="">Blog</Link>
                     <Link href="">About Us</Link>
                 </nav>
-                <div className='flex items-center gap-6'>
+                <div className='hidden md:flex items-center gap-6'>
                     <Link className='button bg-white text-[#5B5B5B]' href="">Login</Link>
                     <Link className='button bg-white/30 text-white' href="">Sign Up</Link>
                 </div>
+                <button className='text-white text-xl p-2 hover:bg-white/20 md:hidden'>
+                    <FaBars />
+                </button>
             </div>
         </header>
     )

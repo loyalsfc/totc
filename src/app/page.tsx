@@ -28,7 +28,7 @@ import Footer from '@/components/footer/footer'
 export default function Home() {
   return (
     <div>
-      <div className='bg-primary relative h-screen after:bg-primary after:utils after:[clip-path:ellipse()] after:z-10 before:utils before:bg-white before:h-10'>
+      <div className='bg-primary relative md:h-screen after:bg-primary after:utils after:[clip-path:ellipse()] after:z-10 before:utils before:bg-white before:h-10'>
         <Header />
         <Hero />
       </div>
@@ -43,7 +43,7 @@ export default function Home() {
                 turqoiseText='TOTC?'
                 note='TOTC is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place.'
               />
-              <div className='grid grid-cols-2 gap-20 py-10'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-20 py-10'>
                 <WhatIsCard 
                   image={instructorPortrait} 
                   type='INSTRUCTORS'
@@ -57,7 +57,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex gap-20 items-center py-10 max-w-6xl mx-auto'>
+            <section className='flex flex-col md:flex-row gap-20 items-center py-10 max-w-6xl mx-auto'>
               <article className='flex-1 flex flex-col justify-between'>
                 <h5 className='text-2xl font-medium text-blue relative'>
                   <div className='h-10 w-10 rounded-full bg-green-100 absolute -top-2 -left-2 -z-10'/>
@@ -66,7 +66,7 @@ export default function Home() {
                 <p className='my-6'>TOTC’s school management software helps traditional and online schools manage scheduling, attendance, payments and virtual classrooms all in one secure cloud-based system.</p>
                 <Link href="" className='underline text-sm'>Learn more</Link>
               </article>
-              <div className='w-1/2 shrink-'>
+              <div className='md:w-1/2 shrink-'>
                 <div className='relative'>
                   <div className='h-40 w-40 rounded-3xl bg-blue absolute -left-4 -top-4 -z-10' />
                   <div className='h-60 w-60 rounded-3xl bg-green-100 absolute -right-4 -bottom-4 -z-10' />
@@ -81,7 +81,7 @@ export default function Home() {
                 turqoiseText='Features'
                 note='This very extraordinary feature, can make learning activities more efficient'
               />
-              <div className='flex pt-16 gap-10'>
+              <div className='flex flex-col md:flex-row pt-16 gap-10'>
                 <div className='flex-1'>
                   <div className='aspect-[1.64/1] relative flex'>
                     <Image
@@ -92,7 +92,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className='w-1/3'>
+                <div className='md:w-1/3'>
                   <h5 className='text-3xl text-blue font-semibold mb-8'>A <span className='text-turqoise'>user interface</span> designed for the classroom</h5>
                   <ul className='flex flex-col gap-8'>
                     <FeatureList text='Teachers don’t get lost in the grid view and have a dedicated Podium space.'>
@@ -119,7 +119,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex items-center gap-32 pb-20'>
+            <section className='flex flex-col md:flex-row items-center gap-32 pb-20'>
               <div className='flex-1 pr-10'>
                 <h5 className='title'><span className='text-turqoise'>Tools</span> For Teachers And Learners</h5>
                 <p>Class has a dynamic set of teaching tools built to be deployed and used during class. Teachers can handout assignments in real-time for students to complete and submit.</p>
@@ -133,7 +133,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex items-center gap-32 pb-20'>
+            <section className='flex flex-col md:flex-row items-center gap-32 pb-20'>
               <div className='aspect-[1/1.08] relative flex-1 shrink-0'>
                 <Image
                   src={testIllustration}
@@ -147,7 +147,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex items-center gap-20 pb-20'>
+            <section className='flex flex-col md:flex-row items-center gap-20 pb-20'>
               <div className='flex-1'>
                 <h5 className='title'>Class Management <span className='text-turqoise'>Tools for Educators</span></h5>
                 <p>Class provides tools to help run and manage the class such as Class Roster, Attendance, and more. With the Gradebook, teachers can review and grade tests and quizzes in real-time.</p>
@@ -161,7 +161,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex items-center gap-10 pb-20'>
+            <section className='flex flex-col md:flex-row items-center gap-10 pb-20'>
               <div className='aspect-[1.35/1] relative flex-1 shrink-0'>
                 <Image
                   src={discussionIllustration}
@@ -183,8 +183,8 @@ export default function Home() {
         <ExploreCourses />
 
         <section className='gap-20 pb-20'>
-          <div className='max-w-6xl mx-auto flex gap-20 items-center'>
-            <article className='w-1/3'>
+          <div className='max-w-6xl mx-auto flex flex-col md:flex-row gap-20 items-center'>
+            <article className='md:w-1/3'>
               <p className='flex items-center text-sm text-[#525596] gap-4 mb-2'>
                 <span className='h-px w-10 bg-[#525596]'/>
                 <span>TESTIMONIAL</span>
@@ -235,8 +235,8 @@ export default function Home() {
           <div className='max-w-6xl mx-auto'>
             <Title blueText='Latest News and Resources' turqoiseText='' note='See the developments that have occurred to TOTC in the world' />
 
-            <div className='grid grid-rows-3  grid-flow-col-dense gap-12 pt-10'>
-              <article className='flex flex-col justify-between row-span-3'>
+            <div className='grid grid-cols-1 md:grid-rows-3  md:grid-flow-col-dense gap-12 pt-10'>
+              <article className='flex flex-col justify-between md:row-span-3'>
                 <div className='aspect-[1.88/1] rounded-2xl overflow-hidden relative'>
                   <Image
                     src={news1}

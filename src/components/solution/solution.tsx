@@ -11,7 +11,7 @@ function Solution() {
                     turqoiseText='Cloud Solution'
                     note='TOTC is one powerful online software suite that combines all the tools needed to run a successful school or office.'
                 />
-                <div className='grid grid-cols-3 gap-16 py-20'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-16 py-20'>
                     <Cards
                         icon='/icon/file-invoice.svg'
                         title='Online Billing, Invoicing, & Contracts'
