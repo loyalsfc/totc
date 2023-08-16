@@ -6,19 +6,19 @@ import portrait from '../../../public/portrait.jpg'
 function Hero() {
     return (
         <section className='text-white overflow-hidden'>
-            <div className="container mx-auto flex flex-col md:flex-row">
+            <div className="container mx-auto flex flex-col md:flex-row px-4">
                 <article className='md:w-2/5 pt-10 md:pt-20 text-center md:text-left'>
                     <h1 className='font-bold text-4xl lg:text-5xl mb-4 md:mb-8'><span className='text-[#F48C06]'>Studying</span> Online is now much easier</h1>
                     <p className="lg:text-lg mb-5 md:mb-10">TOTC is an interesting platform that will teach you in more an interactive way</p>
 
                     <div className='flex items-center gap-4 justify-center md:justify-start'>
-                        <button className="button bg-white/30">Join for free</button>
+                        <button className="button bg-white/30 whitespace-nowrap">Join for free</button>
                         <button className='rounded-full p-2.5 bg-white flex items-center justify-center'>
                             <svg width="16" height="16" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M22.5751 12.8097C23.2212 13.1983 23.2212 14.135 22.5751 14.5236L1.51538 27.1891C0.848878 27.5899 5.91205e-07 27.1099 6.25202e-07 26.3321L1.73245e-06 1.00123C1.76645e-06 0.223477 0.848877 -0.256572 1.51538 0.14427L22.5751 12.8097Z" fill="#23BDEE"/>
                             </svg>
                         </button>
-                        <span className='text-[#252641]'>Watch how it works</span>
+                        <span className='text-[#252641] text-sm lg:text-base'>Watch how it works</span>
                     </div>
                 </article>
                 <div className='relative flex-1 z-[51]'>

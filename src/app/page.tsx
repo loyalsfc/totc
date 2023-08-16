@@ -33,17 +33,17 @@ export default function Home() {
         <Hero />
       </div>
       <main>
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-6xl mx-auto px-4'>
           <Oursuccess />
           <Solution />
           <div className="container mx-auto">
-            <section className=' max-w-5xl mx-auto py-20'>
+            <section className=' max-w-5xl mx-auto pb-20 md:py-20'>
               <Title
                 blueText='What is'
                 turqoiseText='TOTC?'
                 note='TOTC is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place.'
               />
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-20 py-10'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 pb-0 md:pb-10 pt-10'>
                 <WhatIsCard 
                   image={instructorPortrait} 
                   type='INSTRUCTORS'
@@ -57,19 +57,19 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex flex-col md:flex-row gap-20 items-center py-10 max-w-6xl mx-auto'>
+            <section className='flex flex-col md:flex-row gap-10 lg:gap-20 items-center py-10 max-w-6xl mx-auto'>
               <article className='flex-1 flex flex-col justify-between'>
                 <h5 className='text-2xl font-medium text-blue relative'>
                   <div className='h-10 w-10 rounded-full bg-green-100 absolute -top-2 -left-2 -z-10'/>
                   Everything you can do in a physical classroom, <span className='text-turqoise'>you can do with TOTC</span>
                 </h5>
-                <p className='my-6'>TOTC’s school management software helps traditional and online schools manage scheduling, attendance, payments and virtual classrooms all in one secure cloud-based system.</p>
+                <p className='my-3 md:my-6'>TOTC’s school management software helps traditional and online schools manage scheduling, attendance, payments and virtual classrooms all in one secure cloud-based system.</p>
                 <Link href="" className='underline text-sm'>Learn more</Link>
               </article>
               <div className='md:w-1/2 shrink-'>
                 <div className='relative'>
-                  <div className='h-40 w-40 rounded-3xl bg-blue absolute -left-4 -top-4 -z-10' />
-                  <div className='h-60 w-60 rounded-3xl bg-green-100 absolute -right-4 -bottom-4 -z-10' />
+                  <div className='h-20 md:h-40 w-20 md:w-40 rounded-lg lg:rounded-3xl bg-blue absolute -left-2 md:-left-4 -top-2 md:-top-4 -z-10' />
+                  <div className='h-32 md:h-40 lg:h-60 w-32 md:w-40 lg:w-60 rounded-lg lg:rounded-3xl bg-green-100 absolute -right-2 md:-right-4 -bottom-2 md:-bottom-4 -z-10' />
                   <video src="/classroom.mp4" className='w-full max-h-[288px] object-cover'></video>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function Home() {
                 turqoiseText='Features'
                 note='This very extraordinary feature, can make learning activities more efficient'
               />
-              <div className='flex flex-col md:flex-row pt-16 gap-10'>
+              <div className='flex flex-col md:flex-row pt-16 gap-5 lg:gap-10'>
                 <div className='flex-1'>
                   <div className='aspect-[1.64/1] relative flex'>
                     <Image
@@ -92,8 +92,8 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className='md:w-1/3'>
-                  <h5 className='text-3xl text-blue font-semibold mb-8'>A <span className='text-turqoise'>user interface</span> designed for the classroom</h5>
+                <div className='md:w-2/5 lg:w-1/3'>
+                  <h5 className='text-2xl lg:text-3xl text-blue font-semibold mb-8'>A <span className='text-turqoise'>user interface</span> designed for the classroom</h5>
                   <ul className='flex flex-col gap-8'>
                     <FeatureList text='Teachers don’t get lost in the grid view and have a dedicated Podium space.'>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 26" fill="none">
@@ -119,12 +119,12 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex flex-col md:flex-row items-center gap-32 pb-20'>
-              <div className='flex-1 pr-10'>
+            <section className='flex flex-col md:flex-row items-center gap-10 md:gap-12 lg:gap-32 pb-20'>
+              <div className='flex-1 md:pr-10'>
                 <h5 className='title'><span className='text-turqoise'>Tools</span> For Teachers And Learners</h5>
                 <p>Class has a dynamic set of teaching tools built to be deployed and used during class. Teachers can handout assignments in real-time for students to complete and submit.</p>
               </div>
-              <div className='aspect-[1.11/1] relative flex-1 shrink-0'>
+              <div className='aspect-[1.11/1] relative w-full md:flex-1 shrink-0'>
                 <Image
                   src={illustration}
                   fill
@@ -133,8 +133,8 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex flex-col md:flex-row items-center gap-32 pb-20'>
-              <div className='aspect-[1/1.08] relative flex-1 shrink-0'>
+            <section className='flex flex-col-reverse md:flex-row items-center gap-5 md:gap-10 lg:gap-32 pb-20'>
+              <div className='aspect-[1/1.08] relative w-full md:flex-1 shrink-0'>
                 <Image
                   src={testIllustration}
                   fill
@@ -147,12 +147,12 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex flex-col md:flex-row items-center gap-20 pb-20'>
+            <section className='flex flex-col md:flex-row items-center gap-5 md:gap-10 lg:gap-20 pb-20'>
               <div className='flex-1'>
                 <h5 className='title'>Class Management <span className='text-turqoise'>Tools for Educators</span></h5>
                 <p>Class provides tools to help run and manage the class such as Class Roster, Attendance, and more. With the Gradebook, teachers can review and grade tests and quizzes in real-time.</p>
               </div>
-              <div className='aspect-[1.41/1] relative flex-1 shrink-0'>
+              <div className='aspect-[1.41/1] relative w-full md:flex-1 shrink-0'>
                 <Image
                   src={classIllustration}
                   fill
@@ -161,15 +161,15 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='flex flex-col md:flex-row items-center gap-10 pb-20'>
-              <div className='aspect-[1.35/1] relative flex-1 shrink-0'>
+            <section className='flex flex-col-reverse md:flex-row items-center gap-5 md:pb-20'>
+              <div className='aspect-[1.35/1] relative w-full md:flex-1 shrink-0'>
                 <Image
                   src={discussionIllustration}
                   fill
                   alt='Illustration Image'
                 />
               </div>
-              <div className='flex-1 pl-12'>
+              <div className='flex-1 md:pl-12'>
                 <h5 className='title'>One-on-one<span className='text-turqoise block'>Discussions</span></h5>
                 <p>Teachers and teacher assistants can talk with students privately without leaving the Zoom environment.</p>
               </div>
@@ -182,9 +182,9 @@ export default function Home() {
         </div>
         <ExploreCourses />
 
-        <section className='gap-20 pb-20'>
-          <div className='max-w-6xl mx-auto flex flex-col md:flex-row gap-20 items-center'>
-            <article className='md:w-1/3'>
+        <section className='pb-20'>
+          <div className='max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-5 lg:gap-20 items-center px-4'>
+            <article className='md:w-2/5 lg:w-1/3'>
               <p className='flex items-center text-sm text-[#525596] gap-4 mb-2'>
                 <span className='h-px w-10 bg-[#525596]'/>
                 <span>TESTIMONIAL</span>
@@ -203,26 +203,26 @@ export default function Home() {
                 </div>
               </div>
             </article>
-            <div className='relative flex-1 shrink-0'>
-              <div className='relative w-1/2 aspect-[1/1.25] mx-auto'>
+            <div className='relative w-full md:flex-1 shrink-0'>
+              <div className='relative md:w-2/3 lg:w-1/2 aspect-[1/1.25] mx-auto'>
                 <Image
                   src={smilingWoman}
                   fill
                   alt='Smiling woman'
                   className='object-cover'
                 />
-                <button className='bg-white h-10 w-10 rounded-full grid place-content-center shadow-md absolute top-1/2 -translate-y-1/2 -right-10'>
+                <button className='bg-white h-10 w-10 rounded-full grid place-content-center shadow-md absolute top-1/2 -translate-y-1/2 right-0 lg:-right-10'>
                   <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 2L14 12L2 22" stroke="#1EA4CE" stroke-width="4"/>
                   </svg>
                 </button>
               </div>
-              <div className='absolute bottom-0 right-0 text-sm rounded-2xl w-2/3 border-l-8 border-[#F67766] p-8 bg-white shadow-[2px_4px_60px_0px_rgba(41,44,124,0.10)]'>
-                <p className='leading-[180%] pl-4 border-l border-[#BDBDD1] font-nunito-sans mb-4'>"Thank you so much for your help. It's exactly what I've been looking for. You won't regret it. It really saves me time and effort. TOTC is exactly what our business has been lacking."</p>
+              <div className='absolute bottom-0 right-0 text-sm rounded-2xl w-11/12 lg:w-2/3 border-l-8 border-[#F67766] p-4 lg:p-8 bg-white shadow-[2px_4px_60px_0px_rgba(41,44,124,0.10)]'>
+                <p className='lg:leading-[180%] pl-4 text-sm md:text-base border-l border-[#BDBDD1] font-nunito-sans mb-4'>"Thank you so much for your help. It's exactly what I've been looking for. You won't regret it. It really saves me time and effort. TOTC is exactly what our business has been lacking."</p>
                 <div className='flex items-center justify-between pl-4'>
                   <span>Gloria Rose</span>
-                  <div className='flex flex-col gap-2'>
-                    <div className='text-sm gap-1 text-yellow-400 flex'><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></div>
+                  <div className='flex flex-col lg:gap-2'>
+                    <div className='text-xs lg:text-sm gap-1 text-yellow-400 flex'><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></div>
                     <span>12 reviews at yelp</span>
                   </div>
                 </div>
@@ -232,12 +232,12 @@ export default function Home() {
         </section>
 
         <section className="py-10">
-          <div className='max-w-6xl mx-auto'>
+          <div className='max-w-6xl mx-auto px-4'>
             <Title blueText='Latest News and Resources' turqoiseText='' note='See the developments that have occurred to TOTC in the world' />
 
-            <div className='grid grid-cols-1 md:grid-rows-3  md:grid-flow-col-dense gap-12 pt-10'>
-              <article className='flex flex-col justify-between md:row-span-3'>
-                <div className='aspect-[1.88/1] rounded-2xl overflow-hidden relative'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-rows-3 lg:grid-flow-col gap-12 pt-5 md:pt-10'>
+              <article className='flex flex-col md:flex-row lg:flex-col gap-4 lg:row-span-3'>
+                <div className='aspect-[1.88/1] w-full md:w-[186px] md:h-[133px] lg:w-full lg:h-[unset] rounded-2xl overflow-hidden relative'>
                   <Image
                     src={news1}
                     fill
@@ -245,11 +245,14 @@ export default function Home() {
                     placeholder='blur'
                     className='object-cover'
                   />
+                  <span className='label w-fit absolute right-2 bottom-2 lg:hidden'>NEWS</span>
                 </div>
-                <span className='label w-fit'>NEWS</span>
-                <h6 className='text-blue font-medium hover:underline cursor-pointer'>Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution</h6>
-                <p className='text-sm'>Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...</p>
-                <Link href="" className='underline text-sm'>Read more</Link>
+                <div className='flex flex-col justify-between flex-1 gap-4'>
+                  <span className='label w-fit hidden lg:block'>NEWS</span>
+                  <h6 className='text-blue font-medium hover:underline cursor-pointer'>Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution</h6>
+                  <p className='text-sm'>Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...</p>
+                  <Link href="" className='underline text-sm hidden lg:block'>Read more</Link>
+                </div>
               </article>
               <NewsCard
                 image={news2}

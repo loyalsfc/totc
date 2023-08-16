@@ -4,17 +4,16 @@ import { FaStar } from "react-icons/fa6";
 
 function CourseCard({image, title, intro, amount}:{image:string, title:string, intro:string, amount:number}) {
     return (
-        <div className='bg-white rounded-3xl p-6 ml-8 border-4 border-primary flex-1 flex gap-8'>
-            <div>
+        <div className='bg-white rounded-3xl lg:mx-8 md:p-6 border-4 border-primary flex-1 flex flex-col md:flex-row gap-4 md:gap-8 overflow-hidden'>
+            <div className='h-[200px] md:h-[250px] md:w-[300px] aspect-[1.2/1] md:aspect-[unset] relative'>
                 <Image
                     src={image}
-                    height={250}
-                    width={300}
+                    fill
                     alt='Image'
-                    className='rounded-2xl'
+                    className='md:rounded-2xl object-cover'
                 />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col justify-between md:gap-2 p-4 md:p-0'>
                 <h5 className='font-semibold text-black/80 text-2xl mb-2'>{title}</h5>
                 <p>{intro}</p>
                 <div className=' text-yellow-300 flex items-center justify-between mb-2'>

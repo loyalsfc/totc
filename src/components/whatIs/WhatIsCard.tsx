@@ -11,8 +11,8 @@ function WhatIsCard({image, type, buttonText}: {image: StaticImageData, type: 'I
                 placeholder='blur'
             />
             <div className='absolute top-1/2 left-1/2 text-white text-center -translate-x-1/2 z-10 -translate-y-1/2'>
-                <h5 className='text-2xl font-semibold mb-2'>FOR {type}</h5>
-                <button className='border rounded-full py-3 px-6 group-odd:border-white group-even:border-primary group-even:bg-primary group-odd:hover:bg-white group-odd:hover:text-blue transition-all group-even:hover:opacity-80'>
+                <h5 className='text-xl md:text-2xl whitespace-nowrap font-semibold mb-2'>FOR {type}</h5>
+                <button className='border rounded-full py-2 sm:py-3 px-4 whitespace-nowrap sm:px-6 group-odd:border-white group-even:border-primary group-even:bg-primary group-odd:hover:bg-white group-odd:hover:text-blue transition-all group-even:hover:opacity-80'>
                     {buttonText}
                 </button>
             </div>

@@ -7,7 +7,7 @@ import { FaBars } from 'react-icons/fa6'
 
 function Header() {
     return (
-        <header className='py-4'>
+        <header className='p-4'>
             <div className="container mx-auto flex justify-between items-center">
                 <div className='relative w-[57px] h-[41px]'>
                     <Image
