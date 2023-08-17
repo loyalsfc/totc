@@ -25,8 +25,8 @@ function Header() {
                     <Link href="">About Us</Link>
                 </nav>
                 <div className='hidden md:flex items-center gap-6'>
-                    <Link className='button bg-white text-[#5B5B5B]' href="">Login</Link>
-                    <Link className='button bg-white/30 text-white' href="">Sign Up</Link>
+                    <Link className='button bg-white text-[#5B5B5B]' href="/login">Login</Link>
+                    <Link className='button bg-white/30 text-white' href="/register">Sign Up</Link>
                 </div>
                 <button className='text-white text-xl p-2 hover:bg-white/20 md:hidden'>
                     <FaBars />
