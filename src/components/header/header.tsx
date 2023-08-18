@@ -21,7 +21,7 @@ function Header() {
                     <Link href="">Home</Link>
                     <Link href="">Courses</Link>
                     <Link href="">Careers</Link>
-                    <Link href="">Blog</Link>
+                    <Link href="/blog">Blog</Link>
                     <Link href="">About Us</Link>
                 </nav>
                 <div className='hidden md:flex items-center gap-6'>
