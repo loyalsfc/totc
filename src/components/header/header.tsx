@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { FaBars } from 'react-icons/fa6'
 
 
-function Header() {
+function Header({text}:{text:string}) {
     return (
-        <header className='p-4'>
+        <header className={`p-4 text-[${text}]`}>
             <div className="container mx-auto flex justify-between items-center">
                 <div className='relative w-[57px] h-[41px]'>
                     <Image

@@ -4,7 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 import news1 from '../../../public/news1.png'
 import { getCategory } from '../../../sanity/sanity.query'
-import RelatedBlog from '@/components/related-blog/related-blog'
+import RelatedBlog from '@/components/blog/related-blog/related-blog'
+import MarketingArticles from '@/components/blog/marketing-articles/marketing-articles'
+import Footer from '@/components/footer/footer'
 
 async function Page() {
     const profile = await getCategory();
@@ -93,7 +95,54 @@ async function Page() {
                         </div>
                     </div>
                 </section>
+
+                <section className=''>
+                    <div className="container mx-auto py-20">
+                        <div className="max-w-6xl mx-auto">
+                            <h4 className='text-xl font-bold text-black mb-4'>Marketing Articles</h4>
+                            <div className='flex'>
+                                <MarketingArticles
+                                    bannerImage='/news2.png'
+                                    tag='Cloud'
+                                    duration='3 months'
+                                    title='AWS Certified solutions Architect'
+                                    text='Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor'
+                                    creator={{image: "/portrait.jpg", name: "Lina"}}
+                                    price={{initialPrice: 100, currentPrice: 80}}
+                                />
+                                <MarketingArticles
+                                    bannerImage='/news3.png'
+                                    tag='Scrum'
+                                    duration='2 months'
+                                    title='Introduction to Scrum master'
+                                    text='Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor'
+                                    creator={{image: "/portrait.jpg", name: "Lina"}}
+                                    price={{initialPrice: 70, currentPrice: 50}}
+                                />
+                                <MarketingArticles
+                                    bannerImage='/news1.png'
+                                    tag='Development'
+                                    duration='9 months'
+                                    title='Full Frontend Career Course'
+                                    text='Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor'
+                                    creator={{image: "/portrait.jpg", name: "Lina"}}
+                                    price={{initialPrice: 190, currentPrice: 160}}
+                                />
+                                <MarketingArticles
+                                    bannerImage='/news4.png'
+                                    tag='Development'
+                                    duration='1 months'
+                                    title='Introduction to Element of Design'
+                                    text='Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor'
+                                    creator={{image: "/portrait.jpg", name: "Lina"}}
+                                    price={{initialPrice: 70, currentPrice: 50}}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
+            <Footer/>
         </div>
     )
 }
