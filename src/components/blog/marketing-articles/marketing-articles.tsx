@@ -7,8 +7,8 @@ function MarketingArticles({
     bannerImage:string, tag:string, duration:string, title:string, text:string, creator:{image:string, name:string}, price: {initialPrice: number, currentPrice: number}
 }){
     return (
-        <div className='w-1/4 px-2'>
-            <div className='rounded-md bg-white shadow-[0px_10px_30px_0px_rgba(47,50,125,0.10)] gap-3 flex flex-col p-4'>
+        <div className='w-full sm:w-1/2 lg:w-1/4 p-4 py-0: lg:px-2'>
+            <div className='rounded-md bg-white h-full shadow-[0px_10px_30px_0px_rgba(47,50,125,0.10)] gap-3 flex flex-col p-4'>
                 <div className='relative aspect-[1.4/1]'>
                     <Image
                         src={bannerImage}
@@ -36,7 +36,7 @@ function MarketingArticles({
                 </div>
                 <h4 className='text-blue text-xl font-medium'>{title}</h4>
                 <p className='text-sm leading-[180%]'>{text}</p>
-                <div className='flex gap-2 items-center'>
+                <div className='flex gap-2 items-center mt-auto'>
                     <Image 
                         src={creator.image}
                         height={30}

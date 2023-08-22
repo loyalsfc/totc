@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div>
       <div className='bg-primary relative md:h-screen after:bg-primary after:utils after:[clip-path:ellipse()] after:z-10 before:utils before:bg-white before:h-10'>
-        <Header />
+        <Header textColor='#FFF' linkColor="#5B5B5B" />
         <Hero />
       </div>
       <main>
@@ -280,5 +280,3 @@ export default function Home() {
     </div>
   )
 }
-
-//

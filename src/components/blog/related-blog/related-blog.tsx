@@ -8,7 +8,7 @@ function RelatedBlog({
             bannerImage: string,title: string,profileImage:string, name:string, note:string,views:string
     }){
     return (
-        <div className='rounded-2xl overflow-hidden bg-white bg-[0px_18.829999923706055px_47.08000183105469px_0px_rgba(47,50,125,0.10)] px-6 pt-8 pb-12'  >
+        <div className='rounded-2xl overflow-hidden bg-white bg-[0px_18.829999923706055px_47.08000183105469px_0px_rgba(47,50,125,0.10)] px-4 lg:px-6 pt-4 lg:pt-8 pb-6 lg:pb-12'  >
             <div className='rounded-2xl overflow-hidden relative aspect-[1.88/1]'>
                 <Image
                     src={bannerImage}
@@ -17,7 +17,7 @@ function RelatedBlog({
                     className='object-cover'
                 />
             </div>
-            <h4 className='text-blue text-lg font-medium leading-[180%] mt-4'>{title}</h4>
+            <h4 className='text-blue md:text-lg font-medium leading-[180%] mt-4'>{title}</h4>
             <div className='flex items-center gap-2 my-6'>
                 <Image
                     src={profileImage}
@@ -28,7 +28,7 @@ function RelatedBlog({
                 />
                 <span>{name}</span>
             </div>
-            <p>{note}</p>
+            <p className='text-sm md:text-base'>{note}</p>
             <div className='flex items-center text-sm gap-4 mt-8'>
                 <Link href="" className='underline mr-auto'>Read more</Link>
                 <svg width="18" height="12" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">

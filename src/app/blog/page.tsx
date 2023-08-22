@@ -13,15 +13,15 @@ async function Page() {
     
     return (
         <div>
-            <Header/>
+            <Header textColor="#5B5B5B" linkColor='#FFF'/>
             <main>
                 <article className='bg-[#9DCCFF]'>
                     <div className="container mx-auto">
-                        <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 gap-20 py-10">
-                            <div className='flex flex-col'>
-                                <p className='text-black text-sm mb-4'>By Themadbrains in <span className='text-primary'>inspiration</span></p>
-                                <h1 className='text-4xl font-semibold text-blue'>Why Swift UI Should Be on the Radar of Every Mobile Developer</h1>
-                                <p className='mt-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 py-10">
+                            <div className='flex flex-col gap-4 md:gap-0'>
+                                <p className='text-black text-sm mb-2 lg:mb-4'>By Themadbrains in <span className='text-primary'>inspiration</span></p>
+                                <h1 className='text-2xl lg:text-4xl font-semibold text-blue'>Why Swift UI Should Be on the Radar of Every Mobile Developer</h1>
+                                <p className='mt-auto text-sm lg:text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                                 <Link href="" className='text-sm py-2 px-4 mt-auto w-fit rounded-md bg-primary text-white'>Start learning now</Link>
                             </div>
                             <div className='relative aspect-[1.48/1]'>
@@ -37,10 +37,10 @@ async function Page() {
                 </article>
 
                 <section>
-                    <div className="container mx-auto py-20">
+                    <div className="container mx-auto py-20 px-4">
                         <div className="max-w-6xl mx-auto">
                             <h4 className='text-xl font-bold text-black mb-4'>Reading blog list</h4>
-                            <div className='grid grid-cols-4 gap-12'>
+                            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-12'>
                                 {[{title: "UX/UI", image: '/news3.png'}, {title: "React", image: '/coding.jpg'}, {title:"PHP", image: '/writing.jpg'}, {title: "JavaScript", image: '/coding2.png'}].map(item => {
                                     return (
                                         <div className='relative aspect-[1.1/1] rounded-xl overflow-hidden'>
@@ -49,7 +49,7 @@ async function Page() {
                                                 fill
                                                 alt={item.title}
                                             />
-                                            <div className="absolute bottom-4 w-3/4 p-2 bg-white/70 text-center font-semibold rounded-md left-1/2 -translate-x-1/2  ">{item.title}</div>
+                                            <div className="absolute bottom-4 w-3/4 p-2 bg-white/70 text-center font-semibold rounded-md left-1/2 -translate-x-1/2 text-sm md:text-base ">{item.title}</div>
                                         </div>
                                     )
                                 })}
@@ -59,10 +59,10 @@ async function Page() {
                 </section>
 
                 <section className='bg-[#9DCCFF]/20'>
-                    <div className="container mx-auto py-20">
+                    <div className="container mx-auto py-20 px-4">
                         <div className="max-w-6xl mx-auto">
                             <h4 className='text-xl font-bold text-black mb-4'>Related Blog</h4>
-                            <div className='grid grid-cols-2 gap-16'>
+                            <div className='grid sm:grid-cols-2 gap-6 lg:gap-16'>
                                 <RelatedBlog
                                     bannerImage='/instructor-image.png'
                                     title='Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution'
@@ -99,8 +99,8 @@ async function Page() {
                 <section className=''>
                     <div className="container mx-auto py-20">
                         <div className="max-w-6xl mx-auto">
-                            <h4 className='text-xl font-bold text-black mb-4'>Marketing Articles</h4>
-                            <div className='flex'>
+                            <h4 className='text-xl font-bold px-4 text-black mb-4'>Marketing Articles</h4>
+                            <div className='flex flex-wrap'>
                                 <MarketingArticles
                                     bannerImage='/news2.png'
                                     tag='Cloud'
