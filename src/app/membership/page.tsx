@@ -11,9 +11,9 @@ function Page() {
         <div>
             <Header textColor="#5B5B5B" linkColor='#FFF' />
             <main>
-                <div className="container mx-auto px-4 py-16">
-                    <h2 className='text-center text-4xl font-bold text-primary'>Affordable pricing</h2>
-                    <div className='mx-auto max-w-3xl grid grid-cols-3 py-10 gap-4'>
+                <div className="container mx-auto px-4 pt-8 pb-16 md:py-16">
+                    <h2 className='text-center text-2xl md:text-4xl font-bold text-primary'>Affordable pricing</h2>
+                    <div className='mx-auto max-w-3xl grid md:grid-cols-3 pt-5 pb-10 md:py-10 gap-4'>
                         <PricingCard
                             type="Basic Plan"
                             price = "FREE"
@@ -41,7 +41,7 @@ function Page() {
                     </div>
 
                     <div className='bg-blue rounded-3xl py-12 px-4 text-white text-center mb-12 flex flex-col items-center gap-4'>
-                        <h4 className='text-2xl font-semibold'>Online coaching lessons for remote learning.</h4>
+                        <h4 className='text-xl md:text-2xl font-semibold'>Online coaching lessons for remote learning.</h4>
                         <p className=' max-w-md text-sm'>Unlocking Knowledge, Anywhere, Anytime: Embrace the Future of Learning with Our Online Coaching Lessons for Remote Education</p>
                         <button className='bg-primary rounded-md text-white py-2 px-8 text-xs mt-4'>Start learning now</button>
                     </div>
@@ -53,12 +53,12 @@ function Page() {
                 </div>
             </main>
             <section className='bg-[#9DCCFF] py-10'>
-                <div className="container mx-auto">
+                <div className="container mx-auto px-4">
                     <h4 className='text-2xl text-dark font-semibold'>What our students have to say</h4>
                     <Testimonial />
                     <div className='bg-blue rounded-3xl py-10 -mb-24 px-8 flex items-center justify-between'>
                         <p className='text-white font-semibold text-lg'>APP is available for free</p>
-                        <div className='flex items-center gap-4'>
+                        <div className='flex flex-col md:flex-row items-center gap-4'>
                             <button className='app-download-btn bg-[#29B9E7]'>
                                 <svg width="34" height="20" viewBox="0 0 34 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M24.6094 14.4453C25.3711 14.4453 26.0156 13.8594 26.0156 13.0391C26.0156 12.2773 25.3711 11.6328 24.6094 11.6328C23.8477 11.6328 23.2031 12.2773 23.2031 13.0391C23.2031 13.8594 23.8477 14.4453 24.6094 14.4453ZM9.08203 14.4453C9.84375 14.4453 10.4883 13.8594 10.4883 13.0391C10.4883 12.2773 9.84375 11.6328 9.08203 11.6328C8.32031 11.6328 7.67578 12.2773 7.67578 13.0391C7.67578 13.8594 8.32031 14.4453 9.08203 14.4453ZM25.1367 6.00781C29.9414 8.64453 33.2227 13.5078 33.75 19.25H0C0.46875 13.5078 3.75 8.64453 8.55469 6.00781L5.74219 1.14453C5.68359 1.02734 5.68359 0.910156 5.68359 0.792969C5.68359 0.5 5.91797 0.207031 6.26953 0.207031C6.50391 0.207031 6.67969 0.382812 6.79688 0.558594L9.60938 5.48047C11.8359 4.48438 14.2969 3.95703 16.875 3.95703C19.4531 3.95703 21.8555 4.48438 24.082 5.48047L26.8945 0.558594C27.0117 0.382812 27.1875 0.207031 27.4219 0.207031C27.7734 0.207031 28.0078 0.5 28.0078 0.792969C28.0078 0.910156 28.0078 1.02734 27.9492 1.14453L25.1367 6.00781Z" fill="white"/>
@@ -78,7 +78,7 @@ function Page() {
 
             <section className="pb-20 pt-32">
                 <div className="container mx-auto">
-                    <article className='grid grid-cols-2 gap-16'>
+                    <article className='grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-16'>
                         <Application
                             img='/news1.png'
                             applicationType='Teacher'
