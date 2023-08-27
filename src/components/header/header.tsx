@@ -17,7 +17,7 @@ function Header({textColor, linkColor}:{textColor:string, linkColor:string}) {
                 </div>
                 <nav style={{color: textColor}} className={`gap-6 lg:gap-10 text-[${textColor}] hidden md:flex`}>
                     <Link href="/">Home</Link>
-                    <Link href="">Courses</Link>
+                    <Link href="/courses">Courses</Link>
                     <Link href="">Careers</Link>
                     <Link href="/blog">Blog</Link>
                     <Link href="">About Us</Link>

@@ -65,7 +65,7 @@ function Testimonial() {
                                     src={item.image}
                                     height={120}
                                     width={120}
-                                    alt='Testimonial image overflow-hidden'
+                                    alt='Testimonial image'
                                     className='object-cover'
                                 />
                             </div>
