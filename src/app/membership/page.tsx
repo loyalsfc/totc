@@ -1,4 +1,5 @@
 import Application from '@/components/application/application'
+import CoachingNote from '@/components/coaching-note/coaching-note'
 import Faq from '@/components/faq/faq'
 import Footer from '@/components/footer/footer'
 import Header from '@/components/header/header'
@@ -40,11 +41,7 @@ function Page() {
                         />
                     </div>
 
-                    <div className='bg-blue rounded-3xl py-12 px-4 text-white text-center mb-12 flex flex-col items-center gap-4'>
-                        <h4 className='text-xl md:text-2xl font-semibold'>Online coaching lessons for remote learning.</h4>
-                        <p className=' max-w-md text-sm'>Unlocking Knowledge, Anywhere, Anytime: Embrace the Future of Learning with Our Online Coaching Lessons for Remote Education</p>
-                        <button className='bg-primary rounded-md text-white py-2 px-8 text-xs mt-4'>Start learning now</button>
-                    </div>
+                    <CoachingNote/>
 
                     <div>
                         <h4 className="text-2xl font-semibold text-[#2D3436] text-center mb-4">FAQ</h4>

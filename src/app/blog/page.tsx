@@ -5,6 +5,7 @@ import news1 from '../../../public/news1.png'
 import RelatedBlog from '@/components/blog/related-blog/related-blog'
 import MarketingArticles from '@/components/blog/marketing-articles/marketing-articles'
 import RelatedBlogWrapper from '@/components/blog/related-blog/related-blog-wrapper'
+import Marketing from '@/components/blog/marketing-articles/marketing'
 
 async function Page() {
     return (
@@ -76,44 +77,7 @@ async function Page() {
                     <div className="container mx-auto py-20">
                         <div className="max-w-6xl mx-auto">
                             <h4 className='text-xl font-bold px-4 text-black mb-4'>Marketing Articles</h4>
-                            <div className='flex flex-wrap'>
-                                <MarketingArticles
-                                    bannerImage='/news2.png'
-                                    tag='Cloud'
-                                    duration='3 months'
-                                    title='AWS Certified solutions Architect'
-                                    text='Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor'
-                                    creator={{image: "/portrait.jpg", name: "Lina"}}
-                                    price={{initialPrice: 100, currentPrice: 80}}
-                                />
-                                <MarketingArticles
-                                    bannerImage='/news3.png'
-                                    tag='Scrum'
-                                    duration='2 months'
-                                    title='Introduction to Scrum master'
-                                    text='Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor'
-                                    creator={{image: "/portrait.jpg", name: "Lina"}}
-                                    price={{initialPrice: 70, currentPrice: 50}}
-                                />
-                                <MarketingArticles
-                                    bannerImage='/news1.png'
-                                    tag='Development'
-                                    duration='9 months'
-                                    title='Full Frontend Career Course'
-                                    text='Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor'
-                                    creator={{image: "/portrait.jpg", name: "Lina"}}
-                                    price={{initialPrice: 190, currentPrice: 160}}
-                                />
-                                <MarketingArticles
-                                    bannerImage='/news4.png'
-                                    tag='Development'
-                                    duration='1 months'
-                                    title='Introduction to Element of Design'
-                                    text='Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor'
-                                    creator={{image: "/portrait.jpg", name: "Lina"}}
-                                    price={{initialPrice: 70, currentPrice: 50}}
-                                />
-                            </div>
+                            <Marketing />
                         </div>
                     </div>
                 </section>
