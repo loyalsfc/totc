@@ -1,13 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-
+import Link from 'next/link'
+   
 function MarketingArticles({
     bannerImage, tag, duration, title, text, creator, price
 }:{
     bannerImage:string, tag:string, duration:string, title:string, text:string, creator:{image:string, name:string}, price: {initialPrice: number, currentPrice: number}
 }){
     return (
-        <div className='w-full sm:w-1/2 lg:w-1/4 p-4 py-0: lg:px-2'>
+        <Link href="/courses/this-is-a-dummy-course" className='block w-full sm:w-1/2 lg:w-1/4 p-4 py-0: lg:px-2'>
             <div className='rounded-md bg-white h-full shadow-[0px_10px_30px_0px_rgba(47,50,125,0.10)] gap-3 flex flex-col p-4'>
                 <div className='relative aspect-[1.4/1]'>
                     <Image
@@ -49,7 +50,7 @@ function MarketingArticles({
                     <span className='text-primary font-bold'>${price.currentPrice}</span>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

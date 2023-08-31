@@ -3,17 +3,13 @@ import CoachingNote from '@/components/coaching-note/coaching-note'
 import CategoryCard from '@/components/courses/category/course-category'
 import CourseProgress from '@/components/courses/progress/course-progress'
 import Title from '@/components/courses/title/title'
-import Footer from '@/components/footer/footer'
-import Header from '@/components/header/header'
 import Wrapper from '@/components/wrapper/wrapper'
-import Link from 'next/link'
 import React from 'react'
 
 
 function Courses() {
     return (
         <div>
-            <Header textColor="#5B5B5B" linkColor='#FFF' />
             <Wrapper backgroundColor='rgba(157, 204, 255, 0.2)'>
                     <h3 className='flex items-center justify-between'>
                         <span className='text-xl text-[#252641] font-semibold'>Welcome back, ready for your next lesson?</span>
@@ -42,7 +38,6 @@ function Courses() {
                 <Title text='Students are viewing'/>
                 <Marketing />
             </Wrapper>
-            <Footer/>
         </div>
     )
 }
