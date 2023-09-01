@@ -3,7 +3,7 @@ import React from 'react'
 
 function EducationalOffer() {
     return (
-        <div className='rounded-xl overflow-hidden relative p-8 text-white gap-6 flex flex-col justify-between'>
+        <div className='rounded-xl overflow-hidden relative p-8 md:p-4 lg:p-8 text-white gap-6 flex flex-col justify-between'>
             <Image
                 src="/instructor-image.png"
                 fill

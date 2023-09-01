@@ -12,33 +12,27 @@ import { FaStar } from 'react-icons/fa6'
 function Page() {
     return (
         <main>
-            <div className=' h-[450px] w-full relative'>
+            <div className='h-[200px] sm:h-[300px] md:h-[450px] w-full relative'>
                 <Image
                     src="/course-banner.jpg"
                     fill
                     alt='Course Banner Image'
                     className='object-cover'
                 />
-                <div className="container mx-auto h-full">
-                    <div className="max-w-6xl mx-auto grid grid-cols-3 gap-16 h-full place-content-end">
-                        <div className=' col-span-2' />
-                        
-                    </div>
-                </div>
             </div>
             <section>
-                <div className="container mx-auto h-full">
-                    <div className="max-w-6xl mx-auto grid grid-cols-3 gap-4 lg:gap-16 h-full place-content-end">
-                        <div className='col-span-2 py-10'>
+                <div className="container mx-auto h-full pb-10 md:pb-0 px-4 md:px-0">
+                    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-16 h-full place-content-end">
+                        <div className='md:col-span-2 py-10'>   
                             <div className='flex justify-around'>
                                 <button className='tab-button'>Overview</button>
                                 <button className='tab-button'>Overview</button>
                                 <button className='tab-button'>Overview</button>
                                 <button className='tab-button bg-primary text-white'>Overview</button>
                             </div>
-                            <div className='bg-wrapper-background mt-12 p-4 lg:p-8 rounded-2xl'>
+                            <div className='bg-wrapper-background mt-8 sm:mt-12 p-4 lg:p-8 rounded-2xl'>
                                 <div className='flex gap-5 lg:gap-10'>
-                                    <div className='bg-white rounded-3xl w-48 text-center flex flex-col justify-between p-4 gap-2'>
+                                    <div className='bg-white rounded-3xl w-48 text-center hidden sm:flex flex-col justify-between p-4 gap-2'>
                                         <h4 className='text-black/50 font-bold text-2xl'>4 out of 5</h4>
                                         <div className='flex justify-center gap-2 text-[#FDB022]'>
                                             <FaStar />
@@ -65,8 +59,8 @@ function Page() {
                                 </div>
                             </div>
                         </div>
-                        <div className='-mt-48 lg:-mt-52'>
-                            <div className='relative border-[1.25rem] border-white rounded-tl-md rounded-tr-md h-48 lg:h-52 overflow-hidden'>
+                        <div className='md:-mt-48 lg:-mt-52'>
+                            <div className='relative border-[1.25rem] border-white rounded-tl-md rounded-tr-md h-48 lg:h-52 overflow-hidden hidden md:block'>
                                 <Image
                                     src="/course-banner.jpg"
                                     fill
@@ -74,10 +68,10 @@ function Page() {
                                     className='object-cover hover:scale-125 transition-all'
                                 />
                             </div>
-                            <article className='px-5'>
+                            <article className='sm:px-5'>
                                 <div className='course-info-wrapper'>
-                                    <h2 className='font-semibold items-center flex justify-between text-black py-5'>
-                                        <span className='text-xl lg:text-2xl'>$49.65</span>
+                                    <h2 className='font-semibold items-center flex justify-center gap-3 sm:gap-0 sm:justify-between text-black py-5'>
+                                        <span className='text-2xl sm:text-xl lg:text-2xl'>$49.65</span>
                                         <span className='opacity-50 text-lg lg:text-xl'>$99.99</span>
                                         <span className='opacity-50 text-lg lg:text-xl'>50% off</span>
                                     </h2>
@@ -167,12 +161,14 @@ function Page() {
                 </div>
             </Wrapper>
 
-            <div className='py-10'>
-                <EverythingNote />
+            <div className='pb-0'>
                 <Wrapper backgroundColor='transparent'>
-                    <div className="max-w-6xl mx-auto mt-10">
+                    <div className="max-w-6xl mx-auto mt-5 md:mt-10">
+                        <div className='px-4 pb-8'>
+                            <EverythingNote />
+                        </div>
                         <Title text='Top Educational Offers are listed here' />
-                        <div className="grid grid-cols-3 gap-12">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-5 lg:gap-12">
                             <EducationalOffer />
                             <EducationalOffer />
                             <EducationalOffer />
