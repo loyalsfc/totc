@@ -11,14 +11,14 @@ function Courses() {
     return (
         <div>
             <Wrapper backgroundColor='rgba(157, 204, 255, 0.2)'>
-                    <h3 className='flex items-center justify-between'>
-                        <span className='text-xl text-[#252641] font-semibold'>Welcome back, ready for your next lesson?</span>
-                        <button className='text-sm text-primay font-bold'>View History</button>
+                    <h3 className='flex flex-col sm:flex-row sm:items-center sm:justify-between px-4'>
+                        <span className='md:text-xl text-[#252641] font-semibold'>Welcome back, ready for your next lesson?</span>
+                        <button className='text-sm text-primay font-bold w-fit ml-auto sm:ml-0'>View History</button>
                     </h3>
                     <CourseProgress/>
             </Wrapper>
             <Wrapper backgroundColor='transparent'>
-                <h4 className='text-xl text-dark-blue font-semibold mb-5'>Choice favourite course from top category</h4>
+                <h4 className='md:text-xl text-dark-blue font-semibold mb-5'>Choice favourite course from top category</h4>
                 <CategoryCard />
             </Wrapper>
             <Wrapper backgroundColor='rgba(157, 204, 255, 0.2)'>

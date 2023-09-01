@@ -33,7 +33,7 @@
     @apply rounded-md p-2 w-48 text-white font-semibold flex items-center justify-center gap-2
   }
   .tab-button{
-    @apply text-sm font-bold py-2.5 px-8 rounded-lg bg-black/10
+    @apply text-sm font-bold py-2.5 px-6 lg:px-8 rounded-lg bg-black/10
   }
   .course-details{
     @apply flex items-center gap-3 text-black/50 text-sm font-semibold py-2
@@ -43,6 +43,9 @@
   }
   .course-info-wrapper{
     @apply pb-4 border-b border-b-[#696984]
+  }
+  .course-details-title{
+    @apply text-black text-lg lg:text-xl font-semibold 
   }
 }
 

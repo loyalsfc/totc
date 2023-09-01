@@ -38,11 +38,11 @@ const courses = [
 function CourseProgress() {
     return (
         <div>
-            <ul className='flex py-10'>
+            <ul className='flex py-10 overflow-scroll'>
                 {courses.map((item, index) =>{
                     return(
-                        <li key={index} className='px-4 w-1/3 shrink-0'>
-                            <div className='p-4 rounded-xl bg-white shadow-[0px_18px_47px_0px_rgba(47,50,125,0.10)]'>
+                        <li key={index} className='px-2 lg:px-4 w-2/3 sm:w-1/3 shrink-0'>
+                            <div className='p-4 rounded-xl bg-white h-full flex flex-col shadow-[0px_18px_47px_0px_rgba(47,50,125,0.10)]'>
                                 <div className="aspect-[1.88/1] rounded-lg overflow-hidden relative">
                                     <Image
                                         src={item.bannerImage}
@@ -51,18 +51,17 @@ function CourseProgress() {
                                         className='object-cover'
                                     />
                                 </div>
-                                <h4 className="text-dark-blue font-medium py-1">{item.courseTitle}</h4>
-                                <div className='flex items-center gap-2 mb-3'>
-                                    <div className="h-10 w-10 rounded-full overflow-hidden">
+                                <h4 className="text-dark-blue font-medium py-1 text-sm lg:text-base mb-auto">{item.courseTitle}</h4>
+                                <div className='flex items-center gap-2 mb-3 pt-2'>
+                                    <div className="relative h-8 w-8 lg:h-10 lg:w-10 rounded-full overflow-hidden">
                                         <Image
                                             src={item.courseCreator.image}
-                                            height={40}
-                                            width={40}
+                                            fill
                                             alt={item.courseCreator.name + ' Image'}
                                             className='object-cover rounded-full'
                                         />
                                     </div>
-                                    <span>{item.courseCreator.name}</span>
+                                    <span className='text-sm font-medium'>{item.courseCreator.name}</span>
                                 </div>
                                 <div className='w-full rounded-sm bg-[#D9D9D9] h-1 overflow-hidden'>
                                     <div className="h-full bg-primary" style={{width: `${item.courseTaken / item.courseLength * 100}%`}}/>

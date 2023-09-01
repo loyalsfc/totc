@@ -1,5 +1,10 @@
+import Marketing from '@/components/blog/marketing-articles/marketing'
+import EducationalOffer from '@/components/courses/educational-offer/educational-offer'
 import Rating from '@/components/courses/rating/rating'
 import Review from '@/components/courses/rating/review'
+import Title from '@/components/courses/title/title'
+import EverythingNote from '@/components/everything-note/everything-note'
+import Wrapper from '@/components/wrapper/wrapper'
 import Image from 'next/image'
 import React from 'react'
 import { FaStar } from 'react-icons/fa6'
@@ -23,7 +28,7 @@ function Page() {
             </div>
             <section>
                 <div className="container mx-auto h-full">
-                    <div className="max-w-6xl mx-auto grid grid-cols-3 gap-16 h-full place-content-end">
+                    <div className="max-w-6xl mx-auto grid grid-cols-3 gap-4 lg:gap-16 h-full place-content-end">
                         <div className='col-span-2 py-10'>
                             <div className='flex justify-around'>
                                 <button className='tab-button'>Overview</button>
@@ -31,8 +36,8 @@ function Page() {
                                 <button className='tab-button'>Overview</button>
                                 <button className='tab-button bg-primary text-white'>Overview</button>
                             </div>
-                            <div className='bg-wrapper-background mt-12 p-8 rounded-2xl'>
-                                <div className='flex gap-10'>
+                            <div className='bg-wrapper-background mt-12 p-4 lg:p-8 rounded-2xl'>
+                                <div className='flex gap-5 lg:gap-10'>
                                     <div className='bg-white rounded-3xl w-48 text-center flex flex-col justify-between p-4 gap-2'>
                                         <h4 className='text-black/50 font-bold text-2xl'>4 out of 5</h4>
                                         <div className='flex justify-center gap-2 text-[#FDB022]'>
@@ -60,8 +65,8 @@ function Page() {
                                 </div>
                             </div>
                         </div>
-                        <div className='-mt-52'>
-                            <div className='relative border-[1.25rem] border-white rounded-tl-md rounded-tr-md h-52 overflow-hidden'>
+                        <div className='-mt-48 lg:-mt-52'>
+                            <div className='relative border-[1.25rem] border-white rounded-tl-md rounded-tr-md h-48 lg:h-52 overflow-hidden'>
                                 <Image
                                     src="/course-banner.jpg"
                                     fill
@@ -72,15 +77,15 @@ function Page() {
                             <article className='px-5'>
                                 <div className='course-info-wrapper'>
                                     <h2 className='font-semibold items-center flex justify-between text-black py-5'>
-                                        <span className='text-3xl'>$49.65</span>
-                                        <span className='opacity-50 text-2xl'>$99.99</span>
-                                        <span className='opacity-50 text-2xl'>50% off</span>
+                                        <span className='text-xl lg:text-2xl'>$49.65</span>
+                                        <span className='opacity-50 text-lg lg:text-xl'>$99.99</span>
+                                        <span className='opacity-50 text-lg lg:text-xl'>50% off</span>
                                     </h2>
                                     <span className="block text-center text-primary py-5">11 hour left at this price</span>
                                     <button className="w-full py-2.5 rounded-lg bg-primary text-white text-sm font-semibold transition-all hover:scale-105">Buy Now</button>
                                 </div> 
                                 <div className='pt-5 pb-4 course-info-wrapper'>
-                                    <h4 className="text-black text-xl font-semibold mb-6">This Course Included</h4>
+                                    <h4 className="course-details-title">This Course Included</h4>
                                     <ul>
                                         <li className='course-details'>
                                             <div>
@@ -116,11 +121,65 @@ function Page() {
                                         </li>
                                     </ul>
                                 </div>
+                                <div className='pt-5 pb-4 course-info-wrapper'>
+                                    <h4 className="course-details-title">This Course Included</h4>
+                                    <p className='text-sm'>Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...</p>
+                                </div>
+                                <div className='pt-5 pb-4 course-info-wrapper'>
+                                    <h4 className="course-details-title">Share this course</h4>
+                                    <div className='flex items-center gap-2 py-2'>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM22.1 11.5C22.8 11.4 23.4 11.3 24 11C23.6 11.7 23 12.3 22.3 12.7C22.5 17.4 19.1 22.5 13 22.5C11.2 22.5 9.5 21.9 8 21C9.7 21.2 11.5 20.7 12.7 19.8C11.2 19.8 10 18.8 9.6 17.5C10.1 17.6 10.6 17.5 11.1 17.4C9.6 17 8.5 15.6 8.5 14.1C9 14.3 9.5 14.5 10 14.5C8.6 13.5 8.1 11.6 9 10.1C10.7 12.1 13.1 13.4 15.8 13.5C15.3 11.5 16.9 9.5 19 9.5C19.9 9.5 20.8 9.9 21.4 10.5C22.2 10.3 22.9 10.1 23.5 9.7C23.3 10.5 22.8 11.1 22.1 11.5Z" fill="#696984"/>
+                                        </svg>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z" fill="#696984"/>
+                                            <path d="M24 16C24 11.6 20.4 8 16 8C11.6 8 8 11.6 8 16C8 20 10.9 23.3 14.7 23.9V18.3H12.7V16H14.7V14.2C14.7 12.2 15.9 11.1 17.7 11.1C18.6 11.1 19.5 11.3 19.5 11.3V13.3H18.5C17.5 13.3 17.2 13.9 17.2 14.5V16H19.4L19 18.3H17.1V24C21.1 23.4 24 20 24 16Z" fill="white"/>
+                                        </svg>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z" fill="#FF0000"/>
+                                            <path d="M23.6 12.1C23.4 11.4 22.9 10.9 22.2 10.7C21 10.4 15.9 10.4 15.9 10.4C15.9 10.4 10.9 10.4 9.60001 10.7C8.90001 10.9 8.4 11.4 8.2 12.1C8 13.4 8 16 8 16C8 16 8 18.6 8.3 19.9C8.5 20.6 9 21.1 9.7 21.3C10.9 21.6 16 21.6 16 21.6C16 21.6 21 21.6 22.3 21.3C23 21.1 23.5 20.6 23.7 19.9C24 18.6 24 16 24 16C24 16 24 13.4 23.6 12.1ZM14.4 18.4V13.6L18.6 16L14.4 18.4Z" fill="white"/>
+                                        </svg>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z" fill="#696984"/>
+                                            <path d="M15.9992 9.2C18.1992 9.2 18.4992 9.2 19.3992 9.2C20.1992 9.2 20.5992 9.4 20.8992 9.5C21.2992 9.7 21.5992 9.8 21.8992 10.1C22.1992 10.4 22.3992 10.7 22.4992 11.1C22.5992 11.4 22.6992 11.8 22.7992 12.6C22.7992 13.5 22.7992 13.7 22.7992 16C22.7992 18.3 22.7992 18.5 22.7992 19.4C22.7992 20.2 22.5992 20.6 22.4992 20.9C22.2992 21.3 22.1992 21.6 21.8992 21.9C21.5992 22.2 21.2992 22.4 20.8992 22.5C20.5992 22.6 20.1992 22.7 19.3992 22.8C18.4992 22.8 18.2992 22.8 15.9992 22.8C13.6992 22.8 13.4992 22.8 12.5992 22.8C11.7992 22.8 11.3992 22.6 11.0992 22.5C10.6992 22.3 10.3992 22.2 10.0992 21.9C9.79922 21.6 9.59922 21.3 9.49922 20.9C9.39922 20.6 9.29922 20.2 9.19922 19.4C9.19922 18.5 9.19922 18.3 9.19922 16C9.19922 13.7 9.19922 13.5 9.19922 12.6C9.19922 11.8 9.39922 11.4 9.49922 11.1C9.69922 10.7 9.79922 10.4 10.0992 10.1C10.3992 9.8 10.6992 9.6 11.0992 9.5C11.3992 9.4 11.7992 9.3 12.5992 9.2C13.4992 9.2 13.7992 9.2 15.9992 9.2ZM15.9992 7.7C13.6992 7.7 13.4992 7.7 12.5992 7.7C11.6992 7.7 11.0992 7.9 10.5992 8.1C10.0992 8.3 9.59922 8.6 9.09922 9.1C8.59922 9.6 8.39922 10 8.09922 10.6C7.89922 11.1 7.79922 11.7 7.69922 12.6C7.69922 13.5 7.69922 13.8 7.69922 16C7.69922 18.3 7.69922 18.5 7.69922 19.4C7.69922 20.3 7.89922 20.9 8.09922 21.4C8.29922 21.9 8.59922 22.4 9.09922 22.9C9.59922 23.4 9.99922 23.6 10.5992 23.9C11.0992 24.1 11.6992 24.2 12.5992 24.3C13.4992 24.3 13.7992 24.3 15.9992 24.3C18.1992 24.3 18.4992 24.3 19.3992 24.3C20.2992 24.3 20.8992 24.1 21.3992 23.9C21.8992 23.7 22.3992 23.4 22.8992 22.9C23.3992 22.4 23.5992 22 23.8992 21.4C24.0992 20.9 24.1992 20.3 24.2992 19.4C24.2992 18.5 24.2992 18.2 24.2992 16C24.2992 13.8 24.2992 13.5 24.2992 12.6C24.2992 11.7 24.0992 11.1 23.8992 10.6C23.6992 10.1 23.3992 9.6 22.8992 9.1C22.3992 8.6 21.9992 8.4 21.3992 8.1C20.8992 7.9 20.2992 7.8 19.3992 7.7C18.4992 7.7 18.2992 7.7 15.9992 7.7Z" fill="white"/>
+                                            <path d="M15.9992 11.7C13.5992 11.7 11.6992 13.6 11.6992 16C11.6992 18.4 13.5992 20.3 15.9992 20.3C18.3992 20.3 20.2992 18.4 20.2992 16C20.2992 13.6 18.3992 11.7 15.9992 11.7ZM15.9992 18.8C14.4992 18.8 13.1992 17.6 13.1992 16C13.1992 14.5 14.3992 13.2 15.9992 13.2C17.4992 13.2 18.7992 14.4 18.7992 16C18.7992 17.5 17.4992 18.8 15.9992 18.8Z" fill="white"/>
+                                            <path d="M20.3992 12.6C20.9515 12.6 21.3992 12.1523 21.3992 11.6C21.3992 11.0477 20.9515 10.6 20.3992 10.6C19.8469 10.6 19.3992 11.0477 19.3992 11.6C19.3992 12.1523 19.8469 12.6 20.3992 12.6Z" fill="white"/>
+                                        </svg>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z" fill="#696984"/>
+                                            <path d="M8.09992 15.7083C12.3949 13.8371 15.2589 12.6034 16.6919 12.0074C20.7834 10.3056 21.6335 10.01 22.1877 10.0001C22.3095 9.99805 22.582 10.0283 22.7586 10.1715C22.9076 10.2924 22.9486 10.4558 22.9683 10.5705C22.9879 10.6851 23.0123 10.9464 22.9929 11.1505C22.7712 13.4801 21.8118 19.1335 21.3237 21.7427C21.1172 22.8468 20.7105 23.217 20.3168 23.2532C19.4613 23.3319 18.8116 22.6878 17.9829 22.1446C16.6862 21.2946 15.9537 20.7654 14.695 19.936C13.2404 18.9774 14.1834 18.4506 15.0124 17.5896C15.2293 17.3643 18.999 13.9355 19.0719 13.6244C19.0811 13.5855 19.0895 13.4405 19.0034 13.3639C18.9172 13.2874 18.7901 13.3136 18.6983 13.3344C18.5683 13.3639 16.4968 14.7331 12.4839 17.4419C11.8959 17.8457 11.3633 18.0424 10.8862 18.0321C10.3601 18.0207 9.34822 17.7346 8.59598 17.4901C7.67333 17.1902 6.94002 17.0316 7.00388 16.5223C7.03714 16.257 7.40248 15.9856 8.09992 15.7083Z" fill="white"/>
+                                        </svg>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z" fill="#696984"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6 10.3C20.1 8.8 18.1 8 16 8C11.6 8 8 11.6 8 16C8 17.4 8.40001 18.8 9.10001 20L8 24L12.2 22.9C13.4 23.5 14.7 23.9 16 23.9C20.4 23.9 24 20.3 24 15.9C24 13.8 23.1 11.8 21.6 10.3ZM16 22.6C14.8 22.6 13.6 22.3 12.6 21.7L12.4 21.6L9.89999 22.3L10.6 19.9L10.4 19.6C9.69999 18.5 9.39999 17.3 9.39999 16.1C9.39999 12.5 12.4 9.5 16 9.5C17.8 9.5 19.4 10.2 20.7 11.4C22 12.7 22.6 14.3 22.6 16.1C22.6 19.6 19.7 22.6 16 22.6ZM19.6 17.6C19.4 17.5 18.4 17 18.2 17C18 16.9 17.9 16.9 17.8 17.1C17.7 17.3 17.3 17.7 17.2 17.9C17.1 18 17 18 16.8 18C16.6 17.9 16 17.7 15.2 17C14.6 16.5 14.2 15.8 14.1 15.6C14 15.4 14.1 15.3 14.2 15.2C14.3 15.1 14.4 15 14.5 14.9C14.6 14.8 14.6 14.7 14.7 14.6C14.8 14.5 14.7 14.4 14.7 14.3C14.7 14.2 14.3 13.2 14.1 12.8C14 12.5 13.8 12.5 13.7 12.5C13.6 12.5 13.5 12.5 13.3 12.5C13.2 12.5 13 12.5 12.8 12.7C12.6 12.9 12.1 13.4 12.1 14.4C12.1 15.4 12.8 16.3 12.9 16.5C13 16.6 14.3 18.7 16.3 19.5C18 20.2 18.3 20 18.7 20C19.1 20 19.9 19.5 20 19.1C20.2 18.6 20.2 18.2 20.1 18.2C20 17.7 19.8 17.7 19.6 17.6Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </article>
                         </div>
                     </div>
                 </div>
             </section>
+            <Wrapper backgroundColor='rgba(157, 204, 255, 0.2)'>
+                <div className="max-w-6xl mx-auto">
+                    <Title text='Marketing Articles' />
+                    <Marketing />
+                </div>
+            </Wrapper>
+
+            <div className='py-10'>
+                <EverythingNote />
+                <Wrapper backgroundColor='transparent'>
+                    <div className="max-w-6xl mx-auto mt-10">
+                        <Title text='Top Educational Offers are listed here' />
+                        <div className="grid grid-cols-3 gap-12">
+                            <EducationalOffer />
+                            <EducationalOffer />
+                            <EducationalOffer />
+                        </div>
+                    </div>
+                </Wrapper>
+            </div>
         </main>
     )
 }

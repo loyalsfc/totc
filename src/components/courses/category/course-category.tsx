@@ -54,7 +54,7 @@ const categories = [
 
 function CategoryCard() {
   return (
-    <ul className='grid grid-cols-4 gap-16'>
+    <ul className='grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-16'>
       {categories.map((item, index) => {
         return (
           <li key={index} className='bg-whit text-center rounded-xl flex flex-col items-center p-4 pb-8 shadow-[0px_11px_31px_0px_rgba(47,50,125,0.10)]'>
@@ -64,8 +64,8 @@ function CategoryCard() {
             >
               <item.icon />
             </div>
-            <h4 className='font-bold text-black text-xl mt-3 mb-3.5'>{item.title}</h4>
-            <p className='text-sm'>{item.note}</p>
+            <h4 className='font-bold text-black md:text-xl my-3 md:mb-3.5'>{item.title}</h4>
+            <p className='text-xs lg:text-sm'>{item.note}</p>
           </li>
         )})}
     </ul>
