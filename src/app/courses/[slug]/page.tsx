@@ -5,11 +5,15 @@ import Review from '@/components/courses/rating/review'
 import Title from '@/components/courses/title/title'
 import EverythingNote from '@/components/everything-note/everything-note'
 import Wrapper from '@/components/wrapper/wrapper'
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { FaStar } from 'react-icons/fa6'
 
-function Page() {
+function Page({params}:{params: Params}) {
+    console.log(params)
+    const slug = params.slug
     return (
         <main>
             <div className='h-[200px] sm:h-[300px] md:h-[450px] w-full relative'>
@@ -76,7 +80,7 @@ function Page() {
                                         <span className='opacity-50 text-lg lg:text-xl'>50% off</span>
                                     </h2>
                                     <span className="block text-center text-primary py-5">11 hour left at this price</span>
-                                    <button className="w-full py-2.5 rounded-lg bg-primary text-white text-sm font-semibold transition-all hover:scale-105">Buy Now</button>
+                                    <Link href={`${slug}/checkout`} className="w-full py-2.5 rounded-lg bg-primary text-white text-sm font-semibold transition-all hover:scale-105 text-center block">Buy Now</Link>
                                 </div> 
                                 <div className='pt-5 pb-4 course-info-wrapper'>
                                     <h4 className="course-details-title">This Course Included</h4>

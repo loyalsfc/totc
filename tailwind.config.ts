@@ -19,6 +19,9 @@ const config: Config = {
       },
       fontFamily:{
         "nunito-sans": ['var(--font-nunito-sans)']
+      },
+      boxShadow:{
+        "boxed": '0px 18.83px 47.08px 0px rgba(47, 50, 125, 0.10)'
       }
     },
   },
