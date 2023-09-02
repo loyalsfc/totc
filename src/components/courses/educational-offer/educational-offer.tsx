@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
-function EducationalOffer() {
+function EducationalOffer({img}:{img:string}) {
     return (
         <div className='rounded-xl overflow-hidden relative p-8 md:p-4 lg:p-8 text-white gap-6 flex flex-col justify-between'>
             <Image
-                src="/instructor-image.png"
+                src={img}
                 fill
                 alt='Img'
                 className='-z-20 object-cover'

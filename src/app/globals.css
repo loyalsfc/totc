@@ -48,7 +48,10 @@
     @apply text-black text-lg lg:text-xl font-semibold 
   }
   .payment-card-wrapper{
-    @apply rounded-2xl border border-[#D9D9D9] h-20 min-w-[120px] max-w-[160px] overflow-hidden grid place-content-center shrink-0
+    @apply rounded-2xl border border-[#D9D9D9] h-16 aspect-[1.82/1] max-w-[160px] overflow-hidden grid place-content-center shrink-0
+  }
+  .checkout-spacing{
+    @apply py-2 border-b border-b-secondary-color
   }
 }
 

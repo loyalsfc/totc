@@ -173,9 +173,9 @@ function Page({params}:{params: Params}) {
                         </div>
                         <Title text='Top Educational Offers are listed here' />
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-5 lg:gap-12">
-                            <EducationalOffer />
-                            <EducationalOffer />
-                            <EducationalOffer />
+                            <EducationalOffer img="/instructor-image.png" />
+                            <EducationalOffer img="/instructor-image.png" />
+                            <EducationalOffer img="/instructor-image.png" />
                         </div>
                     </div>
                 </Wrapper>

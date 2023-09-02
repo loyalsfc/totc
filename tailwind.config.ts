@@ -15,7 +15,8 @@ const config: Config = {
         "dark-blue": "#252641",
         'green-100': "#33EFA0",
         "dark": "#2D3436",
-        'wrapper-background': "rgba(157, 204, 255, 0.2)"
+        'wrapper-background': "rgba(157, 204, 255, 0.2)",
+        'secondary-color': "#5B5B5B"
       },
       fontFamily:{
         "nunito-sans": ['var(--font-nunito-sans)']
