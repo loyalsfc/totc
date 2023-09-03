@@ -18,7 +18,7 @@ function Footer() {
 
                 <form>
                     <h5 className='text-lg text-center font-medium mb-1'>Subscribe to get our Newsletter</h5>
-                    <div className='flex gap-1 md:gap-4'>
+                    <div className='flex flex-col min-[300px]:flex-row gap-1 md:gap-4'>
                         <input type="email" placeholder='Your email' className='rounded-full px-4 py-1 border flex-1 border-[#83839A] bg-transparent focus:outline-none' />
                         <button className='button bg-primary text-white'>Subscribe</button>
                     </div>

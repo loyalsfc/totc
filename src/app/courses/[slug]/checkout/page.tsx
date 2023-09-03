@@ -7,12 +7,12 @@ import React from 'react'
 function Page() {
     return (
         <main>
-            <section className='container mx-auto flex py-10 px-4 items-start'>
-                <div className='w-3/5 pr-16'>
-                    <div className=" rounded-2xl bg-white shadow-boxed p-8">
+            <section className='container mx-auto flex flex-col-reverse lg:flex-row gap-10 lg:gap-0 py-10 px-4 items-start'>
+                <div className='w-full lg:w-3/5 lg:pr-16'>
+                    <div className=" rounded-2xl bg-white shadow-boxed px-4 py-8 sm:p-8">
                         <h1 className='text-blue font-semibold text-2xl'>Checkout</h1>
                         <h4 className='text-[#5B5B5B] font-semibold text-sm'>Card Type</h4>
-                        <div className='flex gap-4 pb-10 pt-5'>
+                        <div className='grid grid-cols-4 gap-4 pb-10 pt-5'>
                             <div className='payment-card-wrapper'>
                                 <img src="/payment-cards/Paypal.png" alt="" />
                             </div>
@@ -40,7 +40,7 @@ function Page() {
                                 id='card-number'
                                 placeholder='Enter Card Number'
                             />
-                            <div className='grid grid-cols-2 gap-10'>
+                            <div className='grid grid-cols-1 sm:grid-cols-2 sm:gap-10'>
                                 <FormInput
                                     label='Expiration Date (MM/YY)'
                                     type='month'
@@ -59,17 +59,17 @@ function Page() {
                                     type='checkbox'
                                     id='save-card'
                                 />
-                                <label htmlFor="save-card">Save my information for faster checkout</label>
+                                <label htmlFor="save-card" className='text-sm sm:text-base'>Save my information for faster checkout</label>
                             </div>
                             <button className='bg-primary rounded-md py-2.5 w-full mt-8 text-white'>Confirm Payment</button>
                         </form>
                     </div>
                 </div>
-                <div className="w-2/5 rounded-2xl text-secondary-color p-8 bg-wrapper-background">
+                <div className="w-full lg:w-2/5 rounded-2xl text-secondary-color px-4 py-8 sm:p-8 bg-wrapper-background">
                     <h2 className='mb-3 text-blue'>SUMMARY</h2>
 
                     <ul className=''>
-                        <li className='flex gap-4 py-4 checkout-spacing'>
+                        <li className='flex gap-4 py-4 checkout-spacing flex-col min-[320px]:flex-row'>
                             <div className="rounded-xl relative h-20 aspect-[1.6/1] overflow-hidden">
                                 <Image
                                     src="/course-image.jpg"
@@ -84,7 +84,7 @@ function Page() {
                                 <p className='text-black tracking-[0.48px] text-lg'>$24.69</p>
                             </div>
                         </li>
-                        <li className='flex gap-4 checkout-spacing'>
+                        <li className='flex gap-4 checkout-spacing flex-col min-[320px]:flex-row'>
                             <div className="rounded-xl relative h-20 aspect-[1.6/1] overflow-hidden">
                                 <Image
                                     src="/course-image.jpg"

@@ -23,6 +23,9 @@ const config: Config = {
       },
       boxShadow:{
         "boxed": '0px 18.83px 47.08px 0px rgba(47, 50, 125, 0.10)'
+      },
+      backgroundImage:{
+        "search": 'url("/course-image.jpg")'  
       }
     },
   },
