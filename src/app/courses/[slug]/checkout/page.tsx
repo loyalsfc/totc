@@ -1,6 +1,8 @@
 import EducationalOffer from '@/components/courses/educational-offer/educational-offer'
 import Title from '@/components/courses/title/title'
 import FormInput from '@/components/form-input/form-input'
+import TopEducationOffer from '@/components/top-education-offer/top-education-offer'
+import Wrapper from '@/components/wrapper/wrapper'
 import Image from 'next/image'
 import React from 'react'
 
@@ -119,16 +121,7 @@ function Page() {
                 </div>
             </section>
 
-            <section>
-                <div className="container mx-auto px-4 py-10">
-                    <Title text='Top Educational Offers are listed here' />
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-5 lg:gap-12">
-                        <EducationalOffer img="/news1.png" />
-                        <EducationalOffer img="/news2.png" />
-                        <EducationalOffer img="/news3.png" />
-                    </div>
-                </div>
-            </section>
+            <TopEducationOffer />
         </main>
     )
 }

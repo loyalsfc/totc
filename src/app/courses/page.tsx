@@ -3,6 +3,7 @@ import CoachingNote from '@/components/coaching-note/coaching-note'
 import CategoryCard from '@/components/courses/category/course-category'
 import CourseProgress from '@/components/courses/progress/course-progress'
 import Title from '@/components/courses/title/title'
+import RecommendedCourses from '@/components/recommended-courses/recommended-courses'
 import Wrapper from '@/components/wrapper/wrapper'
 import React from 'react'
 
@@ -21,10 +22,7 @@ function Courses() {
                 <h4 className='md:text-xl text-dark-blue font-semibold mb-5'>Choice favourite course from top category</h4>
                 <CategoryCard />
             </Wrapper>
-            <Wrapper backgroundColor='rgba(157, 204, 255, 0.2)'>
-                <Title text='Recommended for you'/>
-                <Marketing />
-            </Wrapper>
+            <RecommendedCourses />
             <Wrapper backgroundColor='transparent'>
                 <Title text='Get Choice of your courses'/>
                 <Marketing />

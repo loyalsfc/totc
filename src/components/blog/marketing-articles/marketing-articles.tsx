@@ -37,14 +37,16 @@ function MarketingArticles({
                 </div>
                 <h4 className='text-blue text-xl font-medium'>{title}</h4>
                 <p className='text-sm leading-[180%]'>{text}</p>
-                <div className='flex gap-2 items-center mt-auto'>
-                    <Image 
-                        src={creator.image}
-                        height={30}
-                        width={30}
-                        alt='Creator image'
-                        className='rounded-full'
-                    />
+                <div className='flex gap-2 items-center mt-auto text-sm'>
+                    <div className='h-[30px] w-[30px] rounded-full overflow-hidden'>
+                        <Image 
+                            src={creator.image}
+                            height={30}
+                            width={30}
+                            alt='Creator image'
+                            className='object-cover object-top'
+                        />
+                    </div>
                     <span className='font-medium text-black'>{creator.name}</span>
                     <span className='ml-auto line-through italic'>${price.initialPrice}</span>
                     <span className='text-primary font-bold'>${price.currentPrice}</span>

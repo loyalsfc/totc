@@ -56,6 +56,12 @@
   .search-select{
     @apply bg-white rounded px-4 py-2.5 outline-none appearance-none flex-1
   }
+  .search-list{
+    @apply flex items-center gap-4 mb-2 last:mb-0
+  }
+  .search-list div{
+    @apply h-4 w-4 rounded-full bg-[#55EFC4]/40 
+  }
 }
 
 @media (prefers-color-scheme: dark) {
