@@ -170,13 +170,13 @@ function Search() {
                 <main>
                     <div className=' bg-search bg-cover bg-center bg-no-repeat'>
                         <div className='py-16 w-full bg-primary/30'>
-                            <div className="container mx-auto">
+                            <div className="container mx-auto px-4">
                                 <div className="max-w-4xl mx-auto">
                                     <form className='bg-white rounded p-1 flex' action="">
-                                        <input type="text" placeholder='Search your favorite course'  className='flex-1 px-4 py-2.5 focus:outline-none'/>
-                                        <button className='bg-primary text-white px-8 rounded'>Search</button>
+                                        <input type="text" placeholder='Search your favorite course'  className='flex-1 px-4 py-1.5 sm:py-2.5 focus:outline-none'/>
+                                        <button className='bg-primary text-white text-sm sm:text-base px-4 sm:px-8 rounded'>Search</button>
                                     </form>
-                                    <div className='pt-5 flex gap-4 justify-between'>
+                                    <div className='pt-5 flex flex-wrap gap-4 justify-center lg:justify-between'>
                                         <select name="" id="" className='search-select'>
                                             <option value="">Subject</option>
                                         </select>
@@ -217,8 +217,8 @@ function Search() {
                                             />
                                         )})}
                                 </div>
-                                <div className='px-8 lg:px-12 bg-wrapper-background rounded-xl text-blue py-6 mt-10 flex gap-16 items-center'>
-                                    <article className='w-2/6'>
+                                <div className='px-4 sm:px-8 lg:px-12 bg-wrapper-background rounded-xl text-blue py-6 mt-10 flex flex-col md:flex-row gap-16 items-center pt-10 md:py-6'>
+                                    <article className='md:w-2/6'>
                                         <h3 className='font-semibold text-xl mb-4'>Know about learning learning platform</h3>
                                         <ul className='mb-4'>
                                             <li className='search-list'>
@@ -236,7 +236,7 @@ function Search() {
                                         </ul>
                                         <button className='rounded-md bg-primary text-white text-bold text-lg py-2.5 px-6'>Start learning now</button>
                                     </article>
-                                    <div className='flex-1 aspect-[1.72/1] relative'>
+                                    <div className='w-full md:flex-1 aspect-[1.72/1] relative'>
                                         <Image
                                             src={groupImage}
                                             fill
@@ -254,7 +254,7 @@ function Search() {
                             <Title
                                 text='Classes taught my real creators'
                             />
-                            <ul className='grid grid-cols-3 gap-12'>
+                            <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
                                 {instructors.map((item, index) => {
                                     return(
                                         <RealCreatorCourses
@@ -271,9 +271,9 @@ function Search() {
                             <h4 className=' tracking-[0.6px] mb-8 text-xl text-black font-medium'>
                                 What our students have to say
                             </h4>
-                            <div className="bg-white rounded-2xl px-12 py-16 flex gap-12 items-center">
-                                <div className='pl-16 relative w-fit'>
-                                    <div className='rounded-full z-10 overflow-hidden h-80 w-80 relative'>
+                            <div className="bg-white rounded-2xl px-4 sm:px-8 lg:px-12 py-16 flex flex-col md:flex-row gap-6 lg:gap-12 items-center">
+                                <div className='pl-8 lg:pl-16 relative w-fit'>
+                                    <div className='rounded-full z-10 overflow-hidden h-64 lg:h-80 w-64 lg:w-80 relative'>
                                         <Image  
                                             src={smilingWoman}
                                             fill
@@ -283,13 +283,13 @@ function Search() {
                                         />
                                     </div>
                                     <div className=' h-20 w-20 rounded-full absolute top-0 right-4 bg-[#F0FF92]/[69]' />
-                                    <div className=' h-48 w-48 rounded-full absolute bottom-0 left-0 bg-[#88FFD4]/[47]' />
+                                    <div className=' h-36 lg:h-48 w-36 lg:w-48 rounded-full absolute bottom-0 left-0 bg-[#88FFD4]/[47]' />
                                     <div className=' h-24 w-24 rounded-full absolute bottom-0 right-0 bg-[#FBBC82]/[62]' />
                                 </div>
                                 <article className=' max-w-sm'>
                                     <h4 className="text-dark-blue font-bold text-lg mb-3">Savannah Nguyen</h4>
                                     <h5 className='text-dark-blue font-medium mb-2'>tanya.hill@example.com</h5>
-                                    <p className='mb-2 text-sm'>Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor<br/>
+                                    <p className='mb-3 text-sm'>Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor<br/>
                                     Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor<br/>
                                     Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor
                                     </p>
@@ -309,7 +309,7 @@ function Search() {
                                         </svg>
                                     </div>
                                 </article>
-                                <div className='flex flex-col gap-2 items-center ml-auto mt-auto'>
+                                <div className='flex md:flex-col gap-2 items-center md:ml-auto mt-auto'>
                                     <ImageCircle path='/instructor-2.png' />
                                     <ImageCircle path='/instructor-4.png' />
                                     <ImageCircle path='/instructor-3.png' />
