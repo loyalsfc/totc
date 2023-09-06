@@ -1,13 +1,23 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import heroImage from '../../../public/hero-image.png'
 import portrait from '../../../public/portrait.jpg'
+import { motion } from 'framer-motion'
+import Wrapper from '../wrapper/wrapper'
 
 function Hero() {
+
     return (
         <section className='text-white overflow-hidden'>
             <div className="container mx-auto flex flex-col md:flex-row px-4">
-                <article className='md:w-2/5 pt-10 md:pt-20 text-center md:text-left'>
+                <motion.article 
+                    className='md:w-2/5 pt-10 md:pt-20 text-center md:text-left'
+                    initial={{opacity: 0, y: 100}}
+                    animate={{opacity: 1, y: 0 }}
+                    transition={{duration: 0.5 }}
+                >
                     <h1 className='font-bold text-4xl lg:text-5xl mb-4 md:mb-8'><span className='text-[#F48C06]'>Studying</span> Online is now much easier</h1>
                     <p className="lg:text-lg mb-5 md:mb-10">TOTC is an interesting platform that will teach you in more an interactive way</p>
 
@@ -20,34 +30,57 @@ function Hero() {
                         </button>
                         <span className='text-[#252641] text-sm lg:text-base'>Watch how it works</span>
                     </div>
-                </article>
+                </motion.article>
                 <div className='relative flex-1 z-[51]'>
-                    <Image
-                        src="/icon/media.svg"
-                        height={80}
-                        width={80}
-                        alt='Icon'
+                    <motion.div
+                        initial={{opacity: 0, scale: 0}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 1 }}
                         className='absolute right-1/4 top-[10%]'
-                    />
+                    >
+                        <Image
+                            src="/icon/media.svg"
+                            height={80}
+                            width={80}
+                            alt='Icon'
+                        />
+                    </motion.div>
 
-                    <div className='absolute top-1/4 left-14 z-50'>
+                    <motion.div 
+                        className='absolute top-1/4 left-14 z-50'
+                        initial={{opacity: 0, scale: 0}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 1, delay: 0.5 }}
+                    >
                         <Cards
                             image='/icon/calender.svg'
                             title='250k'
                             note='Assisted student'
                             color='#23BDEE'
                         />
-                    </div>
-                    <div className='absolute top-1/2 right-14 z-50'>
+                    </motion.div>
+                    <motion.div 
+                        className='absolute top-1/2 right-14 z-50'
+                        initial={{opacity: 0, scale: 0}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 1, delay: 1 }}
+                    >
                         <Cards
                             image='/icon/email.svg'
                             title='Congratulations'
                             note='Your admission completed'
                             color='#F88C3D'
                         />
-                    </div>
-                    <div className='p-3 lg:p-5 rounded-lg backdrop-blur-[10px] flex bg-white/80 gap-3 lg:gap-5 absolute top-3/4 left-14 z-50'>
-                        <div className='p-2 h-10 lg:h-12 w-10 lg:w-12 grid place-content-center rounded-full overflow-hidden border border-black relative'>
+                    </motion.div>
+                    <motion.div 
+                        className='p-3 lg:p-5 rounded-lg backdrop-blur-[10px] flex bg-white/80 gap-3 lg:gap-5 absolute top-3/4 left-14 z-50'
+                        initial={{opacity: 0, scale: 0}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{duration: 1, delay: 1.5 }}
+                    >
+                        <div 
+                            className='p-2 h-10 lg:h-12 w-10 lg:w-12 grid place-content-center rounded-full overflow-hidden border border-black relative'
+                        >
                             <Image
                                 src={portrait}
                                 fill
@@ -59,16 +92,22 @@ function Hero() {
                             <h5 className='font-bold font-nunito-sans lg:text-xl text-[#595959] leading-tight lg:leading-snug'>User Experience Class</h5>
                             <p className='text-[#545567] tracking-[0.4px] text-sm lg:text-base leading-tight lg:leading-snug'>Today at 12.00 PM</p>
                         </div>
-                    </div>
-                    <div className='relative aspect-[0.774/1] h-[580px] mx-auto '>
+                    </motion.div>
+                    <motion.div 
+                        className='relative aspect-[0.774/1] h-[580px] mx-auto '
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{duration: 0.5 }}
+                    >
                         <Image
                             src={heroImage}
                             fill
                             alt='Hero Image'
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
+            {/* </div> */}
         </section>
     )
 }

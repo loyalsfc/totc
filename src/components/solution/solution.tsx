@@ -1,38 +1,45 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import Title from '../title/title'
+import Wrapper from '../wrapper/wrapper'
+import { motion } from 'framer-motion'
 
 function Solution() {
     return (
-        <section>
-            <div className="container mx-auto">
-                <Title
-                    blueText='All-in-one'
-                    turqoiseText='Cloud Solution'
-                    note='TOTC is one powerful online software suite that combines all the tools needed to run a successful school or office.'
+        <Wrapper backgroundColor='transparent'>
+            <Title
+                blueText='All-in-one'
+                turqoiseText='Cloud Solution'
+                note='TOTC is one powerful online software suite that combines all the tools needed to run a successful school or office.'
+            />
+            <motion.div 
+                className='grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-4 lg:gap-16 py-20'
+                initial={{opacity: 0, y: 100}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.5 }}
+            >
+                <Cards
+                    icon='/icon/file-invoice.svg'
+                    title='Online Billing, Invoicing, & Contracts'
+                    note='Simple and secure control of your organization’s financial and legal transactions. Send customized invoices and contracts'
+                    bgColor='#2F327D'
                 />
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-4 lg:gap-16 py-20'>
-                    <Cards
-                        icon='/icon/file-invoice.svg'
-                        title='Online Billing, Invoicing, & Contracts'
-                        note='Simple and secure control of your organization’s financial and legal transactions. Send customized invoices and contracts'
-                        bgColor='#2F327D'
-                    />
-                    <Cards
-                        icon='/icon/calender.svg'
-                        title='Easy Scheduling & Attendance Tracking'
-                        note='Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student attendance'
-                        bgColor='#00CBB8'
-                    />
-                    <Cards
-                        icon='/icon/users.svg'
-                        title='Customer Tracking'
-                        note='Automate and track emails to individuals or groups. Skilline’s built-in system helps organize your organization '
-                        bgColor='#49BBBD'
-                    />
-                </div>
-            </div>
-        </section>
+                <Cards
+                    icon='/icon/calender.svg'
+                    title='Easy Scheduling & Attendance Tracking'
+                    note='Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student attendance'
+                    bgColor='#00CBB8'
+                />
+                <Cards
+                    icon='/icon/users.svg'
+                    title='Customer Tracking'
+                    note='Automate and track emails to individuals or groups. Skilline’s built-in system helps organize your organization '
+                    bgColor='#49BBBD'
+                />
+            </motion.div>
+        </Wrapper>
     )
 }
 

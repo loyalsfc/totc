@@ -3,6 +3,7 @@
 import React, {useState} from 'react'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer';
+import {motion} from 'framer-motion'
 
 
 function Oursuccess() {
@@ -10,9 +11,21 @@ function Oursuccess() {
         <article className='py-20'>
             <div className="container mx-auto text-center text-[#010514CC]/80">
                 <h3 className='text-4xl font-bold mb-4'>Our Success</h3>
-                <p className=' max-w-3xl mx-auto'>Ornare id fames interdum porttitor nulla turpis etiam. Diam vitae sollicitudin at nec nam et pharetra gravida. Adipiscing a quis ultrices eu ornare tristique vel nisl orci. </p>
+                <motion.p 
+                    className=' max-w-3xl mx-auto'
+                    initial={{opacity: 0, y: 100}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5 }}
+                >
+                        Ornare id fames interdum porttitor nulla turpis etiam. Diam vitae sollicitudin at nec nam et pharetra gravida. Adipiscing a quis ultrices eu ornare tristique vel nisl orci. 
+                </motion.p>
 
-                <div className='grid grid-cols-1 md:grid-cols-5 pt-16'>
+                <motion.div 
+                    className='grid grid-cols-1 md:grid-cols-5 pt-16'
+                    initial={{opacity: 0, y: 100}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5 }}
+                >
                     <Counts
                         count={15}
                         prefix='K+'
@@ -38,7 +51,7 @@ function Oursuccess() {
                         prefix=''
                         note='Years of Experience'
                     />
-                </div>
+                </motion.div>
             </div>
         </article>
     )

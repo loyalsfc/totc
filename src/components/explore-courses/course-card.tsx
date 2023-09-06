@@ -1,10 +1,18 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import { FaStar } from "react-icons/fa6";
+import {motion} from 'framer-motion'
 
 function CourseCard({image, title, intro, amount}:{image:string, title:string, intro:string, amount:number}) {
     return (
-        <div className='bg-white rounded-3xl lg:mx-8 md:p-6 border-4 border-primary flex-1 flex flex-col md:flex-row gap-4 md:gap-8 overflow-hidden'>
+        <motion.div 
+            className='bg-white rounded-3xl lg:mx-8 md:p-6 border-4 border-primary flex-1 flex flex-col md:flex-row gap-4 md:gap-8 overflow-hidden'
+            initial={{opacity: 0, scale: 0.5}}
+            whileInView={{opacity: 1, scale: 1}}
+            transition={{duration: 0.5}}
+        >
             <div className='h-[200px] md:h-[250px] md:w-[300px] aspect-[1.2/1] md:aspect-[unset] relative'>
                 <Image
                     src={image}
@@ -22,7 +30,7 @@ function CourseCard({image, title, intro, amount}:{image:string, title:string, i
                 </div>
                 <button className="rounded-xl border border-primary p-2 font-semibold text-primary">Explore</button>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
