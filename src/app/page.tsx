@@ -14,14 +14,13 @@ import WhatIsCard from '@/components/whatIs/WhatIsCard'
 import Title from '@/components/title/title'
 import Link from 'next/link'
 import ExploreCourses from '@/components/explore-courses/explore-courses'
-import { FaStar } from 'react-icons/fa6'
 import NewsCard from '@/components/news-card/news-card'
 import Footer from '@/components/footer/footer'
 import EverythingNote from '@/components/everything-note/everything-note'
-import OurFeatures from '@/components/home/our-features/our-features'
-import FeatureTtems from '@/components/home/feature-items/feature-items'
-import Testimonial from '@/components/home/testimonial/testimonial'
-import ScrollBtn from '@/components/scroll-btn/scroll-btn'
+import FeatureTtems from '../components/home/feature-items/feature-items'
+import Testimonial from '../components/home/testimonial/testimonial'
+import ScrollBtn from '../components/scroll-btn/scroll-btn'
+import OurFeatures from '../components/home/our-features/our-features'
 
 export default function Home() {
   return (
