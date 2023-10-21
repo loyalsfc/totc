@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 import illustration from '../../../../public/illustration.png'
 import testIllustration from '../../../../public/test-illustration.png'
-import classIllustration from '../../../../public/class-illustration.png'
+import classIllustration from '../../../../public/class-Illustration.png'
 import discussionIllustration from '../../../../public/discussion-illustration.png'
 
 function FeatureTtems() {
