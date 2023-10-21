@@ -37,9 +37,9 @@ async function Page() {
                         <div className="max-w-6xl mx-auto">
                             <h4 className='text-xl font-bold text-black mb-4'>Reading blog list</h4>
                             <div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-12'>
-                                {[{title: "UX/UI", image: '/news3.png'}, {title: "React", image: '/coding.jpg'}, {title:"PHP", image: '/writing.jpg'}, {title: "JavaScript", image: '/coding2.png'}].map(item => {
+                                {[{title: "UX/UI", image: '/news3.png'}, {title: "React", image: '/coding.jpg'}, {title:"PHP", image: '/writing.jpg'}, {title: "JavaScript", image: '/coding2.png'}].map((item, index) => {
                                     return (
-                                        <div className='relative aspect-[1.1/1] rounded-xl overflow-hidden'>
+                                        <div key={index} className='relative aspect-[1.1/1] rounded-xl overflow-hidden'>
                                             <Image
                                                 src={item.image}
                                                 fill
