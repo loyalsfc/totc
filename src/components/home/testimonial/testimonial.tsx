@@ -60,7 +60,11 @@ function Testimonial() {
                         whileInView={{opacity: 1, skewX: 0}}
                         transition={{duration: 0.5, delay: 0.5}}
                     >
-                        <p className='lg:leading-[180%] pl-4 text-sm md:text-base border-l border-[#BDBDD1] font-nunito-sans mb-4'>"Thank you so much for your help. It's exactly what I've been looking for. You won't regret it. It really saves me time and effort. TOTC is exactly what our business has been lacking."</p>
+                        <p 
+                            className='lg:leading-[180%] pl-4 text-sm md:text-base border-l border-[#BDBDD1] font-nunito-sans mb-4'
+                        >
+                            &quot;Thank you so much for your help. It&apos;s exactly what I&apos;ve been looking for. You won&apos;t regret it. It really saves me time and effort. TOTC is exactly what our business has been lacking.&quot;
+                        </p>
                         <div className='flex items-center justify-between pl-4'>
                             <span>Gloria Rose</span>
                             <div className='flex flex-col lg:gap-2'>
