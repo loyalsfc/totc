@@ -207,6 +207,7 @@ function Search() {
                                     {courses.map((item, index) => {
                                         return (
                                             <MarketingArticles
+                                                key={index}
                                                 bannerImage={item.courseBanner}
                                                 tag={item.category}
                                                 duration={item.durationMonths + " months"}
@@ -258,6 +259,7 @@ function Search() {
                                 {instructors.map((item, index) => {
                                     return(
                                         <RealCreatorCourses
+                                            key={index}
                                             name={item.name}
                                             image={item.image}
                                         />
